@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rameshwar Engineers | Press Tools, Dies &amp; Precision Manufacturing</title>
+  <meta name="description" content="Rameshwar Engineers (Rameshwar Group) — press tools, dies, jig fixtures, VMC machining and axle/banjo component manufacturing since 1998, Pune, India.">
+  
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="assets/images/logo.png" type="image/x-icon">
+  
+  <style>
+    :root {
+      --bg: #ffffff;
+      --surface: #f5f6f7;
+      --surface-2: #eef0f2;
+      --steel-line: #e2e5e9;
+      --text: #12161c;
+      --text-dim: #5b6470;
+      --text-dimmer: #913420;
+      --amber: #e08a1e;
+      --amber-soft: #f2a63d;
+      --amber-dark: #b97c22;
+      --amber-text: #9c5c0c;
+      --hazard-y: #ffc72c;
+      --hazard-k: #141414;
+      --blue: #2f7dab;
+      --radius: 2px;
+      --maxw: 1200px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+    ul { list-style: none; }
+
+    h1, h2, h3, h4 {
+      font-family: 'Oswald', sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+      font-weight: 600;
+      line-height: 1.15;
+    }
+
+    .eyebrow {
+      font-family: 'JetBrains Mono', monospace;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      font-size: 12px;
+      color: var(--amber-text);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+    .eyebrow::before {
+      content: "";
+      width: 52px; height: 2px;
+      background: var(--amber-text);
+      display: inline-block;
+    }
+
+    .wrap {
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: 0 32px;
+    }
+    section { padding: 110px 0; position: relative; }
+    @media(max-width: 768px) { section { padding: 72px 0; } .wrap { padding: 0 20px; } }
+
+    .section-head { max-width: 640px; margin-bottom: 56px; }
+    .section-head h2 { font-size: clamp(28px, 4vw, 42px); color: var(--text); }
+    .section-head p { color: var(--text-dim); margin-top: 14px; font-size: 16px; max-width: 560px; }
+
+    /* Hazard tag - signature element */
+    .hazard-tag {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--hazard-k);
+      color: var(--hazard-y);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 7px 12px 7px 10px;
+      border-left: 10px solid transparent;
+      border-image: repeating-linear-gradient(-45deg, var(--hazard-y) 0 6px, var(--hazard-k) 6px 12px) 10;
+    }
+    .hazard-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--hazard-y); animation: pulse 1.8s infinite; }
+    @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: .35; } }
+
+    /* ============ HEADER ============ */
+    header {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--steel-line);
+      transition: padding .3s ease, box-shadow .3s ease;
+      padding: 16px 0;
+    }
+    header.scrolled {
+      padding: 10px 0;
+      box-shadow: 0 8px 24px rgba(18, 22, 28, 0.06);
+    }
+    header .wrap { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 28px; }
+    .logo { display: flex; align-items: center; gap: 12px; }
+    .logo-mark-img {
+      height: 48px;
+      width: auto;
+      object-fit: contain;
+      display: block;
+      transition: height .3s ease;
+    }
+    header.scrolled .logo-mark-img { height: 40px; }
+    .logo-text { font-family: 'Oswald', sans-serif; line-height: 1.1; }
+    .logo-text b { display: block; font-size: 16px; letter-spacing: 0.04em; color: var(--text); }
+    .logo-text span { display: block; font-size: 12px; letter-spacing: 0.16em; color: var(--text-dimmer); font-family: 'JetBrains Mono', monospace; margin-top: 2px; }
+
+    nav.desktop-nav { display: flex; gap: 32px; justify-self: center; }
+    nav.desktop-nav a {
+      font-size: 13px; text-transform: uppercase; letter-spacing: 0.08em;
+      color: var(--text-dim); font-weight: 500;
+      position: relative; padding-bottom: 4px;
+      transition: color .2s;
+    }
+    nav.desktop-nav a:hover { color: var(--text); }
+    nav.desktop-nav a::after {
+      content: ""; position: absolute; left: 0; bottom: 0; width: 0; height: 1px; background: var(--amber);
+      transition: width .25s ease;
+    }
+    nav.desktop-nav a:hover::after { width: 100%; }
+
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      padding: 13px 26px;
+      font-family: 'Inter', sans-serif; font-weight: 600; font-size: 13px;
+      text-transform: uppercase; letter-spacing: 0.06em;
+      border-radius: var(--radius);
+      cursor: pointer; border: 1px solid transparent;
+      transition: transform .18s ease, background .18s ease, border-color .18s ease, color .18s ease;
+      white-space: nowrap;
+    }
+    .btn:hover { transform: translateY(-2px); }
+    .btn-amber { background: var(--amber); color: #181205; }
+    .btn-amber:hover { background: var(--amber-soft); }
+    .btn-ghost { border-color: var(--steel-line); color: var(--text); background: transparent; }
+    .btn-ghost:hover { border-color: var(--amber-text); color: var(--amber-text); }
+    .btn-ghost-invert { border: 1px solid rgba(255, 255, 255, 0.55); color: #fff; background: transparent; }
+    .btn-ghost-invert:hover { border-color: #fff; background: rgba(255, 255, 255, 0.1); }
+    
+    .header-cta { display: flex; align-items: center; gap: 24px; justify-self: end; }
+    .header-phone { font-family: 'JetBrains Mono', monospace; font-size: 13px; color: var(--text-dim); display: flex; align-items: center; gap: 8px; white-space: nowrap; flex-shrink: 0; }
+    .header-phone svg { width: 15px; height: 15px; stroke: var(--amber-text); }
+
+    .burger { display: none; width: 26px; height: 20px; position: relative; cursor: pointer; }
+    .burger span { position: absolute; left: 0; width: 100%; height: 2px; background: var(--text); transition: .25s; }
+    .burger span:nth-child(1) { top: 0; }
+    .burger span:nth-child(2) { top: 9px; }
+    .burger span:nth-child(3) { top: 18px; }
+    .burger.open span:nth-child(1) { transform: translateY(9px) rotate(45deg); }
+    .burger.open span:nth-child(2) { opacity: 0; }
+    .burger.open span:nth-child(3) { transform: translateY(-9px) rotate(-45deg); }
+
+    .mobile-nav {
+      position: fixed; inset: 0; background: var(--bg); z-index: 90;
+      display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 28px;
+      transform: translateY(-100%); transition: transform .35s ease;
+    }
+    .mobile-nav.open { transform: translateY(0); }
+    .mobile-nav a { font-family: 'Oswald', sans-serif; font-size: 26px; text-transform: uppercase; letter-spacing: 0.04em; }
+
+    @media(max-width: 900px) {
+      nav.desktop-nav, .header-phone { display: none; }
+      .burger { display: block; }
+    }
+    @media(max-width: 560px) {
+      header .wrap { grid-template-columns: 1fr auto; }
+      .header-cta { display: none; }
+      .logo-text b { font-size: 13.5px; }
+      .logo-text span { display: none; }
+    }
+
+    /* ============ HERO ============ */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: flex-end;
+      overflow: hidden;
+      color: #fff;
+    }
+    .hero-media { position: absolute; inset: 0; z-index: 0; background: #eeeeee; }
+    .hero-media video, .hero-media img {
+      position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;
+    }
+    .hero-media::after {
+      content: "";
+      position: absolute; inset: 0;
+      background:
+        linear-gradient(0deg, rgba(8, 10, 13, 0.88) 0%, rgba(8, 10, 13, 0.35) 46%, rgba(8, 10, 13, 0.55) 100%),
+        linear-gradient(90deg, rgba(8, 10, 13, 0.55) 0%, rgba(8, 10, 13, 0.05) 55%);
+    }
+    .hero .wrap {
+      position: relative; z-index: 2;
+      width: 100%;
+      padding-top: 220px;
+      padding-bottom: 64px;
+    }
+    .hero-copy { max-width: 680px; }
+    .eyebrow-invert { color: var(--amber-soft); }
+    .eyebrow-invert::before { background: var(--amber-soft); }
+    .hero h1 {
+      font-size: clamp(36px, 5.4vw, 60px);
+      color: #fff;
+      margin-bottom: 20px;
+      text-shadow: 0 2px 20px rgba(0, 0, 0, 0.25);
+    }
+    .hero h1 em { font-style: normal; color: var(--amber-soft); }
+    .hero .lead { color: rgba(255, 255, 255, 0.82); font-size: 17px; max-width: 520px; margin-bottom: 34px; }
+    .hero .cta-row { display: flex; gap: 16px; flex-wrap: wrap; }
+    .hero-tag-float { margin-top: 44px; }
+
+    /* Stat strip */
+    .stat-strip { background: var(--bg); border-bottom: 1px solid var(--steel-line); }
+    .stat-row { display: flex; gap: 0; flex-wrap: wrap; padding: 32px 0; }
+    .stat { flex: 1; min-width: 130px; padding-right: 24px; border-left: 1px solid var(--steel-line); padding-left: 24px; }
+    .stat:first-child { border-left: none; padding-left: 0; }
+    .stat b { display: block; font-family: 'Oswald', sans-serif; font-size: 30px; color: var(--amber-text); font-weight: 600; }
+    .stat span { font-size: 12px; color: var(--text-dimmer); text-transform: uppercase; letter-spacing: 0.06em; }
+    
+    @media(max-width: 700px) {
+      .stat { flex: 1 1 45%; border-left: none; padding-left: 0; border-top: 1px solid var(--steel-line); padding-top: 16px; margin-top: 16px; }
+      .stat:nth-child(1), .stat:nth-child(2) { border-top: none; margin-top: 0; padding-top: 0; }
+    }
+
+    /* ============ CUSTOMERS (MODERNIZED) ============ */
+.customer-grid { 
+  display: grid; 
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); 
+  gap: 1px; 
+  background: var(--steel-line); 
+  border: 1px solid var(--steel-line); 
+}
+
+.customer-tile { 
+  background: #ffffff; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  aspect-ratio: 1.5 / 1; 
+  padding: 24px; 
+  position: relative;
+  transition: background-color 0.3s ease;
+}
+
+.customer-tile img { 
+  max-width: 100%; 
+  max-height: 100%; 
+  object-fit: contain; 
+  /* Modern premium transition styling */
+  filter: grayscale(1) opacity(0.65); 
+  transition: filter 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Elevate brand colors seamlessly on hover */
+.customer-tile:hover {
+  background-color: var(--surface);
+}
+
+.customer-tile:hover img { 
+  filter: grayscale(0) opacity(1); 
+}
+
+/* Industrial themed partner callout card */
+.customer-tile.partner-badge {
+  background: var(--surface-2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.customer-tile.partner-badge span {
+  font-family: 'JetBrains Mono', monospace; 
+  font-size: 11px; 
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: var(--text-dimmer); 
+  text-align: center; 
+  border: 1px dashed var(--steel-line);
+  padding: 8px 12px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.25s ease;
+}
+
+.customer-tile.partner-badge:hover span {
+  color: var(--amber-text);
+  border-color: var(--amber-text);
+  background: #ffffff;
+}
+
+/* Responsive breakdowns optimized for uniform grids */
+@media(max-width: 768px) {
+  .customer-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .customer-tile {
+    padding: 16px;
+  }
+}
+
+@media(max-width: 480px) {
+  .customer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+/* ============ FOOTER ============ */
+  footer{ border-top:1px solid var(--steel-line); padding:50px 0 30px; }
+  .footer-top{ display:flex; justify-content:space-between; flex-wrap:wrap; gap:30px; padding-bottom:36px; }
+  .footer-links{ display:flex; gap:60px; flex-wrap:wrap; }
+  .footer-col h5{ font-size:11px; color:var(--text-dimmer); text-transform:uppercase; letter-spacing:0.1em; margin-bottom:14px; }
+  .footer-col a{ display:block; font-size:13.5px; color:var(--text-dim); margin-bottom:9px; }
+  .footer-col a:hover{ color:var(--amber-text); }
+  .footer-bottom{ display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px; border-top:1px solid var(--steel-line); padding-top:24px; font-size:12px; color:var(--text-dimmer); }
+
+  /* reveal animation */
+  .reveal{ opacity:0; transform:translateY(16px); transition:opacity .5s ease, transform .5s ease; }
+  .reveal.in{ opacity:1; transform:translateY(0); }
+  @media(prefers-reduced-motion:reduce){
+    .reveal{ opacity:1; transform:none; transition:none; }
+  }
+  /* no-JS fallback: never leave content invisible */
+  .no-js .reveal{ opacity:1; transform:none; }
+
+  @media(max-width:480px){
+    .eyebrow{ display:block; }
+    .eyebrow::before{ display:block; margin-bottom:8px; }
+  }
+
+  ::selection{ background:var(--amber); color:#181205; }
+.process-step.step-1 .dot {
+    background: #176c71;
+    border-color: #176c71;
+    color: #fff;
+}
+
+.process-step.step-2 .dot {
+    background: #2563eb;
+    border-color: #2563eb;
+    color: #fff;
+}
+
+.process-step.step-3 .dot {
+    background: #7c3aed;
+    border-color: #7c3aed;
+    color: #fff;
+}
+
+.process-step.step-4 .dot {
+    background: #d97706;
+    border-color: #d97706;
+    color: #fff;
+}
+
+.process-step.step-5 .dot {
+    background: #16a34a;
+    border-color: #16a34a;
+    color: #fff;
+}
+/* Updated footer layout for social alignment */
+  .footer-bottom { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    flex-wrap: wrap; 
+    gap: 16px; 
+    border-top: 1px solid var(--steel-line); 
+    padding-top: 24px; 
+    font-size: 12px; 
+    color: var(--text-dimmer); 
+  }
+  .footer-socials {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+  }
+  .footer-socials a {
+    color: var(--text-dimmer);
+    display: inline-flex;
+    transition: color 0.2s ease, transform 0.2s ease;
+  }
+  .footer-socials a:hover {
+    color: var(--amber-text);
+    transform: translateY(-2px);
+  }
+  .footer-socials svg {
+    width: 18px;
+    height: 18px;
+    fill: currentColor;
+  }
+  @media(max-width: 560px) {
+    .footer-bottom { flex-direction: column; text-align: center; }
+  }
+
+    
+  </style>
+
+  <!-- ============ SCHEMA ORG SEO MARKUP ============ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AutomotiveBusiness",
+    "name": "Rameshwar Engineers",
+    "legalName": "Rameshwar Group",
+    "description": "Manufacturer of high-performance press tools, dies, jig fixtures, VMC machining, and critical safety/axle components for the automotive and non-automotive sectors.",
+    "url": "https://www.rameshwareng.com",
+    "logo": "https://www.rameshwareng.com/assets/images/logo.png",
+    "foundingDate": "1998",
+    "founders": [
+      {
+        "@type": "Person",
+        "name": "Kailash Rahangdale",
+        "jobTitle": "Managing Director"
+      }
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Gate No. 8/3A, Behind Abhang Weigh Bridge, Dehu Bypass Road, Vitthal Nagar, Dehugaon, Tal. Haveli",
+      "addressLocality": "Pune",
+      "addressRegion": "Maharashtra",
+      "postalCode": "412109",
+      "addressCountry": "IN"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "18.7208", 
+      "longitude": "73.7844"
+    },
+    "contactPoint": [
+      {
+        "@type": "ContactPoint",
+        "telephone": "+91-99229-53455",
+        "contactType": "sales",
+        "email": "kailash72.r@gmail.com",
+        "availableLanguage": ["English", "Hindi", "Marathi"]
+      },
+      {
+        "@type": "ContactPoint",
+        "telephone": "+91-98231-69278",
+        "contactType": "technical support",
+        "name": "Dadasaheb Shinde",
+        "email": "rameshwareng789@gmail.com"
+      }
+    ],
+    "knowsAbout": [
+      "Press Tools and Dies Manufacturing",
+      "Jig and Fixture Manufacturing",
+      "Precision VMC Machining",
+      "Hot Forming & Casting Dies",
+      "Axle and Banjo Housings Production",
+      "Automotive Component Engineering"
+    ]
+  }
+  </script>
+</head>
+<body>
+<!-- ============ HEADER ============ -->
+<header id="siteHeader">
+  <div class="wrap">
+    <a href="https://rameshwareng.com/#top" class="logo">
+      <img src="assets/images/logo.png" alt="Rameshwar Engineers Logo" class="logo-mark-img">
+      <div class="logo-text">
+        <b style= "color: #913420;">Rameshwar Engineers</b>
+        <span>Est. 1998</span>
+      </div>
+    </a>
+    <nav class="desktop-nav">
+      <a href="https://rameshwareng.com/#about">About</a>
+      <a href="https://rameshwareng.com/#services">Services</a>
+      <a href="https://rameshwareng.com/#products">Products</a>
+      <a href="https://rameshwareng.com/#plant">Plant</a>
+      <a href="https://rameshwareng.com/#customers">Customers</a>
+      <a href="https://rameshwareng.com/#contact">Contact</a>
+    </nav>
+    <div class="header-cta">
+      <span  class="btn btn-amber">
+        <svg xmlns="http://w3.org" width="20" height="20" viewBox="0 0 24 24" fill="#25D366">
+  <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397 0 11.966 0c3.178.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.239 3.481 8.42 0 6.556-5.338 11.901-11.907 11.901-2.001-.001-3.971-.504-5.713-1.464L0 24zm6.58-3.459c1.654.982 3.511 1.5 5.409 1.512 5.374 0 9.743-4.379 9.746-9.762.001-2.607-1.012-5.059-2.854-6.902C17.078 3.547 14.624 2.531 12 2.531c-5.38 0-9.75 4.38-9.753 9.762-.001 1.988.517 3.93 1.503 5.64l-.995 3.631 3.722-.975zm12.336-6.848c-.33-.166-1.956-.965-2.256-1.074-.3-.11-.518-.166-.737.166-.218.331-.845 1.074-1.037 1.294-.192.221-.384.248-.714.083-.329-.165-1.389-.512-2.646-1.633-.978-.872-1.637-1.95-1.83-2.28-.192-.33-.021-.508.144-.672.148-.148.33-.385.496-.578.165-.193.22-.33.33-.55.11-.22.055-.413-.028-.578-.083-.166-.737-1.777-1.011-2.434-.267-.641-.539-.553-.737-.563-.19-.01-.408-.012-.625-.012-.218 0-.571.082-.87.408-.299.329-1.14 1.114-1.14 2.719 0 1.605 1.169 3.159 1.329 3.376.162.217 2.299 3.511 5.568 4.92.778.335 1.384.535 1.856.686.781.248 1.492.213 2.054.129.628-.094 1.956-.8 2.231-1.574.275-.774.275-1.436.192-1.574-.083-.137-.299-.22-.629-.385z"/>
+</svg>
+        <a href="https://wa.me/919922953455?text=Hello%20Rameshwar%20Engineers%2C%20I%20would%20like%20to%20enquire%20about%20your%20products%20and%20services."
+   class="whatsapp-float"
+   target="_blank"
+   rel="noopener"
+   aria-label="Chat with Rameshwar Engineers on WhatsApp">
+    <span style= "color: white; font-weight: bold;">+91 99229 53455</span>
+
+</a>
+      </span>
+
+    </div>
+    <div class="burger" id="burger"><span></span><span></span><span></span></div>
+  </div>
+</header>
+
+<div class="mobile-nav" id="mobileNav">
+  <a href="https://rameshwareng.com/#about">About</a>
+  <a href="https://rameshwareng.com/#services">Services</a>
+  <a href="https://rameshwareng.com/#products">Products</a>
+  <a href="https://rameshwareng.com/#plant">Plant</a>
+  <a href="https://rameshwareng.com/#customers">Customers</a>
+  <a href="https://rameshwareng.com/#contact">Contact</a>
+      <span  class="btn btn-amber">
+        <svg xmlns="http://w3.org" width="20" height="20" viewBox="0 0 24 24" fill="#25D366">
+  <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397 0 11.966 0c3.178.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.239 3.481 8.42 0 6.556-5.338 11.901-11.907 11.901-2.001-.001-3.971-.504-5.713-1.464L0 24zm6.58-3.459c1.654.982 3.511 1.5 5.409 1.512 5.374 0 9.743-4.379 9.746-9.762.001-2.607-1.012-5.059-2.854-6.902C17.078 3.547 14.624 2.531 12 2.531c-5.38 0-9.75 4.38-9.753 9.762-.001 1.988.517 3.93 1.503 5.64l-.995 3.631 3.722-.975zm12.336-6.848c-.33-.166-1.956-.965-2.256-1.074-.3-.11-.518-.166-.737.166-.218.331-.845 1.074-1.037 1.294-.192.221-.384.248-.714.083-.329-.165-1.389-.512-2.646-1.633-.978-.872-1.637-1.95-1.83-2.28-.192-.33-.021-.508.144-.672.148-.148.33-.385.496-.578.165-.193.22-.33.33-.55.11-.22.055-.413-.028-.578-.083-.166-.737-1.777-1.011-2.434-.267-.641-.539-.553-.737-.563-.19-.01-.408-.012-.625-.012-.218 0-.571.082-.87.408-.299.329-1.14 1.114-1.14 2.719 0 1.605 1.169 3.159 1.329 3.376.162.217 2.299 3.511 5.568 4.92.778.335 1.384.535 1.856.686.781.248 1.492.213 2.054.129.628-.094 1.956-.8 2.231-1.574.275-.774.275-1.436.192-1.574-.083-.137-.299-.22-.629-.385z"/>
+</svg>
+        <a href="https://wa.me/919922953455?text=Hello%20Rameshwar%20Engineers%2C%20I%20would%20like%20to%20enquire%20about%20your%20products%20and%20services."
+   class="whatsapp-float"
+   target="_blank"
+   rel="noopener"
+   aria-label="Chat with Rameshwar Engineers on WhatsApp">
+    <span style= "color: white; font-weight: bold;">+91 99229 53455</span>
+
+</a>
+      </span>
+</div>
+
+<div id="top"></div>
+
+<!-- ============ HERO & WORK FLOW SECTIONS GO HERE ============ -->
+
+<!-- ============ CUSTOMERS ============ -->
+<section id="customers">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Esteemed Customers</div>
+      <h2>Trusted across the automotive supply chain</h2>
+      <p>We manufacture critical tooling and components for leading names in automotive engineering and forging.</p>
+    </div>
+    
+    <!-- Modernized grid container -->
+    <div class="customer-grid reveal">
+      <div class="customer-tile"><img src="assets/images/customers/reliable.png" alt="Reliable Logo" loading="lazy"></div>
+      <div class="customer-tile"><img src="assets/images/customers/planetto.png" alt="Planetto Tooltech Logo" loading="lazy"></div>
+      <div class="customer-tile"><img src="assets/images/customers/takshi.png" alt="Takshi Auto Components Logo" loading="lazy"></div>
+      <div class="customer-tile"><img src="assets/images/customers/rsb.png" alt="RSB Logo" loading="lazy"></div>
+      <div class="customer-tile"><img src="assets/images/customers/indo-toolings.png" alt="Indo Toolings Logo" loading="lazy"></div>
+      <div class="customer-tile"><img src="assets/images/customers/bharat-forge.png" alt="Bharat Forge Logo" loading="lazy"></div>
+      <div class="customer-tile"><img src="assets/images/customers/omno.png" alt="Nagata Group / OMNO Logo" loading="lazy"></div>
+      <div class="customer-tile"><img src="assets/images/customers/sinter.png" alt="Customer partner Logo" loading="lazy"></div>
+      <div class="customer-tile"><img src="assets/images/customers/prijai.png" alt="Prijai Logo" loading="lazy"></div>
+      <div class="customer-tile"><img src="assets/images/customers/track.png" alt="Track Components Ltd Logo" loading="lazy"></div>
+      <div class="customer-tile"><img src="assets/images/customers/skh.png" alt="SKH Logo" loading="lazy"></div>
+      
+      <!-- Modern Partner Badge -->
+      <div class="customer-tile partner-badge">
+        <span>+ MORE PARTNERS</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap">
+    <div class="footer-top">
+      <a href="#top" class="logo">
+        <img src="assets/images/logo.png" alt="Rameshwar Engineers Logo" class="logo-mark-img">
+        <div class="logo-text">
+          <b style= "color: #913420;">Rameshwar Engineers</b>
+          <span>Est. 1998</span>
+
+        </div>
+      </a>
+
+      <div class="footer-links">
+        <div class="footer-col">
+          <h5>Company</h5>
+          <a href="#about">About Us</a>
+          <a href="#services">Services</a>
+          <a href="#plant">Plant</a>
+        </div>
+        <div class="footer-col">
+          <h5>Work</h5>
+          <a href="#products">Product Gallery</a>
+          <a href="#customers">Customers</a>
+        </div>
+        <div class="footer-col">
+          <h5>Contact</h5>
+          <a href="tel:+919922953455">+91 99229 53455</a>
+          <a href="mailto:kailash72.r@gmail.com">kailash72.r@gmail.com</a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <span>© <span id="yr"></span> Rameshwar Engineers. All rights reserved.</span>
+      
+      <!-- Social Media Icons Row -->
+      <div class="footer-socials">
+        <!-- LinkedIn -->
+        <a href="https://linkedin.com/company/rameshwar-engineers" target="_blank" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+        </a>
+        <!-- Facebook -->
+        <a href="https://facebook.com/rameshwarengineers" target="_blank" aria-label="Facebook">
+          <svg viewBox="0 0 24 24"><path d="M12 2.04c-5.5 0-10 4.49-10 10.02c0 5 3.66 9.15 8.44 9.9v-7H7.9v-2.9h2.54V9.85c0-2.51 1.49-3.89 3.78-3.89c1.09 0 2.23.19 2.23.19v2.47h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.45 2.9h-2.33v7c4.78-.75 8.44-4.9 8.44-9.9c0-5.53-4.5-10.02-10-10.02z"/></svg>
+        </a>
+        <!-- IndiaMART / B2B Industrial Icon Alternate -->
+        <a href="https://www.indiamart.com/rameshwar-engineers" target="_blank" aria-label="IndiaMART Marketplace">
+          <svg viewBox="0 0 24 24"><path d="M12 2L2 22h20L12 2zm0 4.3l6.5 13H5.5L12 6.3zm-1 3.2v4h2v-4h-2zm0 5.5v2h2v-2h-2z"/></svg>
+        </a>
+        <span>
+
+        <a href="https://wa.me/919922953455?text=Hello%20Rameshwar%20Engineers%2C%20I%20would%20like%20to%20enquire%20about%20your%20products%20and%20services."
+   class="whatsapp-float"
+   target="_blank"
+   rel="noopener"
+   aria-label="Chat with Rameshwar Engineers on WhatsApp">
+        <svg xmlns="http://w3.org" viewBox="0 0 24 24" fill="#25D366">
+  <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397 0 11.966 0c3.178.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.239 3.481 8.42 0 6.556-5.338 11.901-11.907 11.901-2.001-.001-3.971-.504-5.713-1.464L0 24zm6.58-3.459c1.654.982 3.511 1.5 5.409 1.512 5.374 0 9.743-4.379 9.746-9.762.001-2.607-1.012-5.059-2.854-6.902C17.078 3.547 14.624 2.531 12 2.531c-5.38 0-9.75 4.38-9.753 9.762-.001 1.988.517 3.93 1.503 5.64l-.995 3.631 3.722-.975zm12.336-6.848c-.33-.166-1.956-.965-2.256-1.074-.3-.11-.518-.166-.737.166-.218.331-.845 1.074-1.037 1.294-.192.221-.384.248-.714.083-.329-.165-1.389-.512-2.646-1.633-.978-.872-1.637-1.95-1.83-2.28-.192-.33-.021-.508.144-.672.148-.148.33-.385.496-.578.165-.193.22-.33.33-.55.11-.22.055-.413-.028-.578-.083-.166-.737-1.777-1.011-2.434-.267-.641-.539-.553-.737-.563-.19-.01-.408-.012-.625-.012-.218 0-.571.082-.87.408-.299.329-1.14 1.114-1.14 2.719 0 1.605 1.169 3.159 1.329 3.376.162.217 2.299 3.511 5.568 4.92.778.335 1.384.535 1.856.686.781.248 1.492.213 2.054.129.628-.094 1.956-.8 2.231-1.574.275-.774.275-1.436.192-1.574-.083-.137-.299-.22-.629-.385z"/>
+</svg>
+</a>
+      </span>
+      </div>
+    </div>
+  </div>
+</footer>
+    

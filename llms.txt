@@ -1,0 +1,33 @@
+# Rameshwar Engineers 
+## Overview
+Rameshwar Engineers is an industrial manufacturing facility specializing in precision tool engineering, heavy-duty automotive component manufacturing, sheet metal forming dies, and high-capacity VMC machining infrastructure.
+
+## Core Capabilities
+- **Die & Tooling Design**: Specialized manufacturing of sheet metal drawing, trimming, piercing, and complex hot-forming dies.
+- **Automotive Components**: Heavy gauge component manufacturing, with high-volume production lines for axle housings and automotive banjo casings (ranging from 4mm to 14mm thickness).
+- **VMC Precision Machining**: Machining components utilizing large-envelope vertical machining centers.
+- **CAD & Simulation**: Comprehensive tooling design, die cavity rendering, and finite element forming simulation validation.
+
+## Technical Architecture & Design Tokens
+The digital assets are structured around a high-performance, responsive single-page architecture built with custom semantic layout systems.
+
+### Color Tokens (CSS Variables)
+- Primary Accent: `#913420` (Industrial Amber / Steel Oxide)
+- Base Surface: `#ffffff` (Main canvases)
+- Utility Surface: `#f5f6f7` / `#eef0f2` (Structured UI sections)
+- Borders & Rules: `#e2e5e9` (Steel Line divider token)
+- Accent Highlights: `#ffc72c` / `#141414` (Hazard Striping Configuration)
+
+### Typography Stack
+- Headings & Displays: `Oswald`, sans-serif
+- Body Interface: `Inter`, sans-serif
+- Technical Specifications / Code: `JetBrains Mono`, monospace
+
+## System Assets & Route Inventory
+- `/index.html`: Main corporate landing ecosystem, containing the Hero Showcase, Capabilities Matrix, Product Gallery Grid, Client Index, and RFQ/Contact Interface.
+- `/404.html`: Custom system exception handler with integrated automatic 15-second safety routing fallback logic.
+- `/assets/images/logo.png`: Primary brand asset.
+
+## Integration Protocols
+- **Product Gallery**: Implements a clean, dynamic CSS Grid (`auto-fill`, min-width `280px`) with integrated attribute filters (`data-cat="axle|dies|cad|machining"`), optimized image lazy-loading, and a custom JavaScript-driven image lightbox overlay.
+- **Customer Logotypes**: Responsive unified grayscale flexbox grid (`minmax(160px, 1fr)`) featuring state-driven CSS transitions to brand color matrices on user focus/hover actions.

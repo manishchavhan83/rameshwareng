@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rameshwar Engineers | Press Tools, Dies &amp; Precision Manufacturing</title>
+<meta name="description" content="Rameshwar Engineers (Rameshwar Group) — press tools, dies, jig fixtures, VMC machining and axle/banjo component manufacturing since 1998, Pune, India.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="shortcut icon" href="assets/images/logo.png" type="image/x-icon">
+<style>
+  :root{
+    --bg:#ffffff;
+    --surface:#f5f6f7;
+    --surface-2:#eef0f2;
+    --steel-line:#e2e5e9;
+    --text:#12161c;
+    --text-dim:#5b6470;
+    --text-dimmer:#913420;
+    --amber:#e08a1e;
+    --amber-soft:#f2a63d;
+    --amber-dark:#b97c22;
+    --amber-text:#9c5c0c;
+    --hazard-y:#ffc72c;
+    --hazard-k:#141414;
+    --blue:#2f7dab;
+    --radius:2px;
+    --maxw:1200px;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:'Inter',sans-serif;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  img{max-width:100%; display:block;}
+  a{color:inherit; text-decoration:none;}
+  ul{list-style:none;}
+
+  h1,h2,h3,h4{
+    font-family:'Oswald',sans-serif;
+    text-transform:uppercase;
+    letter-spacing:0.02em;
+    font-weight:600;
+    line-height:1.15;
+  }
+  .eyebrow{
+    font-family:'JetBrains Mono',monospace;
+    text-transform:uppercase;
+    letter-spacing:0.18em;
+    font-size:12px;
+    color:var(--amber-text);
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-bottom:14px;
+  }
+  .eyebrow::before{
+    content:"";
+    width:22px; height:2px;
+    background:var(--amber-text);
+    display:inline-block;
+  }
+  .wrap{
+    max-width:var(--maxw);
+    margin:0 auto;
+    padding:0 32px;
+  }
+  section{ padding:110px 0; position:relative; }
+  @media(max-width:768px){ section{ padding:72px 0; } .wrap{ padding:0 20px; } }
+
+  .section-head{ max-width:640px; margin-bottom:56px; }
+  .section-head h2{ font-size:clamp(28px,4vw,42px); color:var(--text); }
+  .section-head p{ color:var(--text-dim); margin-top:14px; font-size:16px; max-width:560px; }
+
+  /* Hazard tag - signature element */
+  .hazard-tag{
+    position:relative;
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    background:var(--hazard-k);
+    color:var(--hazard-y);
+    font-family:'JetBrains Mono',monospace;
+    font-size:11px;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    padding:7px 12px 7px 10px;
+    border-left:10px solid transparent;
+    border-image:repeating-linear-gradient(-45deg,var(--hazard-y) 0 6px,var(--hazard-k) 6px 12px) 10;
+  }
+  .hazard-dot{ width:6px; height:6px; border-radius:50%; background:var(--hazard-y); animation:pulse 1.8s infinite; }
+  @keyframes pulse{ 0%,100%{opacity:1;} 50%{opacity:.35;} }
+
+  /* ============ HEADER ============ */
+  header{
+    position:fixed; top:0; left:0; right:0; z-index:100;
+    background:rgba(255,255,255,0.96);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--steel-line);
+    transition:padding .3s ease, box-shadow .3s ease;
+    padding:16px 0;
+  }
+  header.scrolled{
+    padding:10px 0;
+    box-shadow:0 8px 24px rgba(18,22,28,0.06);
+  }
+  header .wrap{ display:grid; grid-template-columns:auto 1fr auto; align-items:center; gap:28px; }
+  .logo{ display:flex; align-items:center; gap:12px; }
+  .logo-mark-img {
+    height: 48px;
+    width: auto;
+    object-fit: contain;
+    display: block;
+    transition: height .3s ease;
+  }
+  header.scrolled .logo-mark-img {
+    height: 40px;
+  }
+  .logo-text{ font-family:'Oswald',sans-serif; line-height:1.1; }
+  .logo-text b{ display:block; font-size:16px; letter-spacing:0.04em; color:var(--text); }
+  .logo-text span{ display:block; font-size:12px; letter-spacing:0.16em; color:var(--text-dimmer); font-family:'JetBrains Mono',monospace; margin-top:2px; }
+
+  nav.desktop-nav{ display:flex; gap:32px; justify-self:center; }
+  nav.desktop-nav a{
+    font-size:13px; text-transform:uppercase; letter-spacing:0.08em;
+    color:var(--text-dim); font-weight:500;
+    position:relative; padding-bottom:4px;
+    transition:color .2s;
+  }
+  nav.desktop-nav a:hover{ color:var(--text); }
+  nav.desktop-nav a::after{
+    content:""; position:absolute; left:0; bottom:0; width:0; height:1px; background:var(--amber);
+    transition:width .25s ease;
+  }
+  nav.desktop-nav a:hover::after{ width:100%; }
+
+  .btn{
+    display:inline-flex; align-items:center; justify-content:center; gap:8px;
+    padding:13px 26px;
+    font-family:'Inter',sans-serif; font-weight:600; font-size:13px;
+    text-transform:uppercase; letter-spacing:0.06em;
+    border-radius:var(--radius);
+    cursor:pointer; border:1px solid transparent;
+    transition:transform .18s ease, background .18s ease, border-color .18s ease, color .18s ease;
+    white-space:nowrap;
+  }
+  .btn:hover{ transform:translateY(-2px); }
+  .btn-amber{ background:var(--amber); color:#181205; }
+  .btn-amber:hover{ background:var(--amber-soft); }
+  .btn-ghost{ border-color:var(--steel-line); color:var(--text); background:transparent; }
+  .btn-ghost:hover{ border-color:var(--amber-text); color:var(--amber-text); }
+  .btn-ghost-invert{ border:1px solid rgba(255,255,255,0.55); color:#fff; background:transparent; }
+  .btn-ghost-invert:hover{ border-color:#fff; background:rgba(255,255,255,0.1); }
+  .header-cta{ display:flex; align-items:center; gap:24px; justify-self:end; }
+  .header-phone{ font-family:'JetBrains Mono',monospace; font-size:13px; color:var(--text-dim); display:flex; align-items:center; gap:8px; white-space:nowrap; flex-shrink:0; }
+  .header-phone svg{ width:15px; height:15px; stroke:var(--amber-text); }
+
+  .burger{ display:none; width:26px; height:20px; position:relative; cursor:pointer; }
+  .burger span{ position:absolute; left:0; width:100%; height:2px; background:var(--text); transition:.25s; }
+  .burger span:nth-child(1){ top:0; }
+  .burger span:nth-child(2){ top:9px; }
+  .burger span:nth-child(3){ top:18px; }
+  .burger.open span:nth-child(1){ transform:translateY(9px) rotate(45deg); }
+  .burger.open span:nth-child(2){ opacity:0; }
+  .burger.open span:nth-child(3){ transform:translateY(-9px) rotate(-45deg); }
+
+  .mobile-nav{
+    position:fixed; inset:0; background:var(--bg); z-index:90;
+    display:flex; flex-direction:column; align-items:center; justify-content:center; gap:28px;
+    transform:translateY(-100%); transition:transform .35s ease;
+  }
+  .mobile-nav.open{ transform:translateY(0); }
+  .mobile-nav a{ font-family:'Oswald',sans-serif; font-size:26px; text-transform:uppercase; letter-spacing:0.04em; }
+
+  @media(max-width:900px){
+    nav.desktop-nav, .header-phone{ display:none; }
+    .burger{ display:block; }
+  }
+  @media(max-width:560px){
+    header .wrap{ grid-template-columns:1fr auto; }
+    .header-cta{ display:none; }
+    .logo-text b{ font-size:13.5px; }
+    .logo-text span{ display:none; }
+  }
+
+  /* ============ HERO ============ */
+  .hero{
+    position:relative;
+    min-height:100vh;
+    display:flex;
+    align-items:flex-end;
+    overflow:hidden;
+    color:#fff;
+  }
+  .hero-media{ position:absolute; inset:0; z-index:0; background:#eeeeee; }
+  .hero-media video, .hero-media img{
+    position:absolute; inset:0; width:100%; height:100%; object-fit:cover;
+  }
+  .hero-media::after{
+    content:"";
+    position:absolute; inset:0;
+    background:
+      linear-gradient(0deg, rgba(8,10,13,0.88) 0%, rgba(8,10,13,0.35) 46%, rgba(8,10,13,0.55) 100%),
+      linear-gradient(90deg, rgba(8,10,13,0.55) 0%, rgba(8,10,13,0.05) 55%);
+  }
+  .hero .wrap{
+    position:relative; z-index:2;
+    width:100%;
+    padding-top:220px;
+    padding-bottom:64px;
+  }
+  .hero-copy{ max-width:680px; }
+  .eyebrow-invert{ color:var(--amber-soft); }
+  .eyebrow-invert::before{ background:var(--amber-soft); }
+  .hero h1{
+    font-size:clamp(36px,5.4vw,60px);
+    color:#fff;
+    margin-bottom:20px;
+    text-shadow:0 2px 20px rgba(0,0,0,0.25);
+  }
+  .hero h1 em{ font-style:normal; color:var(--amber-soft); }
+  .hero .lead{ color:rgba(255,255,255,0.82); font-size:17px; max-width:520px; margin-bottom:34px; }
+  .hero .cta-row{ display:flex; gap:16px; flex-wrap:wrap; }
+
+  .hero-tag-float{ margin-top:44px; }
+
+  /* stat strip — sits directly under the hero, on white */
+  .stat-strip{ background:var(--bg); border-bottom:1px solid var(--steel-line); }
+  .stat-row{ display:flex; gap:0; flex-wrap:wrap; padding:32px 0; }
+  .stat{ flex:1; min-width:130px; padding-right:24px; border-left:1px solid var(--steel-line); padding-left:24px; }
+  .stat:first-child{ border-left:none; padding-left:0; }
+  .stat b{ display:block; font-family:'Oswald',sans-serif; font-size:30px; color:var(--amber-text); font-weight:600; }
+  .stat span{ font-size:12px; color:var(--text-dimmer); text-transform:uppercase; letter-spacing:0.06em; }
+  @media(max-width:700px){
+    .stat{ flex:1 1 45%; border-left:none; padding-left:0; border-top:1px solid var(--steel-line); padding-top:16px; margin-top:16px; }
+    .stat:nth-child(1),.stat:nth-child(2){ border-top:none; margin-top:0; padding-top:0; }
+  }
+
+
+/* ============ FAQ SECTION ============ */
+  .faq-section {
+    background: var(--bg);
+    border-top: 1px solid var(--steel-line);
+  }
+  .faq-grid {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 64px;
+  }
+  @media(max-width: 900px){ 
+    .faq-grid { grid-template-columns: 1fr; gap: 40px; } 
+  }
+  
+  .faq-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .faq-item {
+    border: 1px solid var(--steel-line);
+    background: var(--surface);
+    border-radius: var(--radius);
+    overflow: hidden;
+    transition: border-color 0.2s ease;
+  }
+  .faq-item[open] {
+    border-color: var(--amber-text);
+    background: var(--bg);
+  }
+  .faq-item summary {
+    padding: 20px 24px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    color: var(--text);
+    cursor: pointer;
+    list-style: none;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .faq-item summary::-webkit-details-marker {
+    display: none;
+  }
+  .faq-item summary::after {
+    content: "+";
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 18px;
+    color: var(--amber-text);
+    transition: transform 0.2s ease;
+  }
+  .faq-item[open] summary::after {
+    transform: rotate(45deg);
+  }
+  .faq-content {
+    padding: 0 24px 20px 24px;
+    font-size: 14.5px;
+    color: var(--text-dim);
+    border-top: 1px solid transparent;
+  }
+  .faq-item[open] .faq-content {
+    border-top: 1px solid var(--steel-line);
+    padding-top: 16px;
+  }
+  .faq-content ul {
+    margin-top: 8px;
+    padding-left: 20px;
+    list-style: square;
+  }
+  .faq-content li {
+    margin-bottom: 6px;
+  }
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AutomotiveBusiness",
+  "name": "Rameshwar Engineers",
+  "legalName": "Rameshwar Group",
+  "description": "Manufacturer of high-performance press tools, dies, jig fixtures, VMC machining, and critical safety/axle components for the automotive and non-automotive sectors.",
+  "url": "https://www.rameshwarengineers.com",
+  "logo": "https://www.rameshwarengineers.com/assets/images/logo.png",
+  "foundingDate": "1998",
+  "founders": [
+    {
+      "@type": "Person",
+      "name": "Kailash Rahangdale",
+      "jobTitle": "Managing Director"
+    }
+  ],
+
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Gate No. 8/3A, Behind Abhang Weigh Bridge, Dehu Bypass Road, Vitthal Nagar, Dehugaon, Tal. Haveli",
+    "addressLocality": "Pune",
+    "addressRegion": "Maharashtra",
+    "postalCode": "412109",
+    "addressCountry": "IN"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "18.7208", 
+    "longitude": "73.7844"
+  },
+  "contactPoint": [
+    {
+      "@type": "ContactPoint",
+      "telephone": "+91-99229-53455",
+      "contactType": "sales",
+      "email": "kailash72.r@gmail.com",
+      "availableLanguage": ["English", "Hindi", "Marathi"]
+    },
+    {
+      "@type": "ContactPoint",
+      "telephone": "+91-98231-69278",
+      "contactType": "technical support",
+      "name": "Dadasaheb Shinde",
+      "email": "rameshwareng789@gmail.com"
+    }
+  ],
+  "knowsAbout": [
+    "Press Tools and Dies Manufacturing",
+    "Jig and Fixture Manufacturing",
+    "Precision VMC Machining",
+    "Hot Forming & Casting Dies",
+    "Axle and Banjo Housings Production",
+    "Automotive Component Engineering"
+  ]
+}
+</script>
+</style>
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header id="siteHeader">
+  <div class="wrap">
+    <a href="#top" class="logo">
+      <img src="assets/images/logo.png" alt="Rameshwar Engineers Logo" class="logo-mark-img">
+      <div class="logo-text">
+        <b style= "color: #913420;">Rameshwar Engineers</b>
+        <span>Est. 1998</span>
+      </div>
+    </a>
+    <nav class="desktop-nav">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#products">Products</a>
+      <a href="#plant">Plant</a>
+      <a href="#faq">FAQs</a>
+      <a href="#customers">Customers</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="header-cta">
+      <span class="header-phone">
+        <svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        +91 99229 53455
+      </span>
+      <a href="#contact" class="btn btn-amber">Get a Quote</a>
+    </div>
+    <div class="burger" id="burger"><span></span><span></span><span></span></div>
+  </div>
+</header>
+
+<div class="mobile-nav" id="mobileNav">
+  <a href="#about">About</a>
+  <a href="#services">Services</a>
+  <a href="#products">Products</a>
+  <a href="#plant">Plant</a>
+  <a href="#customers">Customers</a>
+  <a href="#contact">Contact</a>
+  <a href="#contact" class="btn btn-amber" style="margin-top:8px;">Get a Quote</a>
+</div>
+
+<div id="top"></div>
+
+
+<!-- ============ FAQs ============ -->
+<section id="faq" class="faq-section">
+  <div class="wrap">
+    <div class="faq-grid">
+      
+      <div class="reveal">
+        <div class="eyebrow">Common Queries</div>
+        <h2>Frequently Asked Questions</h2>
+        <p style="color:var(--text-dim); margin-top:14px; font-size:16px;">
+          Find quick answers regarding our manufacturing infrastructure, tooling capabilities, corporate entities, and project lead times.
+        </p>
+        <a href="#contact" class="btn btn-ghost" style="margin-top:24px;">Have another question?</a>
+      </div>
+      
+      <div class="faq-container reveal">
+        
+        <div class="faq-item-wrapper">
+          <details class="faq-item" open>
+            <summary>What specific components and tools do you specialize in?</summary>
+            <div class="faq-content">
+              <p>We offer comprehensive concept-to-product design, engineering, and testing services. Our manufacturing core specialties include:</p>
+              <ul>
+                <li>High-performance press tools, dies, and jig fixtures.</li>
+                <li>Precision multi-axis VMC machining.</li>
+                <li>Hot forming and casting dies ranging from 10mm to 16mm in thickness.</li>
+                <li>Critical safety and automotive components, notably rear axle and banjo housings.</li>
+              </ul>
+            </div>
+          </details>
+        </div>
+
+        <div class="faq-item-wrapper">
+          <details class="faq-item">
+            <summary>How are Rameshwar Engineers, Onkar Dies, and Tusshar Axles connected?</summary>
+            <div class="faq-content">
+              <p>Rameshwar Engineers operates as part of the unified Rameshwar Group entity, which strategically comprises both <strong>Onkar Dies Pvt. Ltd.</strong> and <strong>Tusshar Axles Pvt. Ltd.</strong> to pool specialized tooling and engineering capabilities under one robust umbrella.</p>
+            </div>
+          </details>
+        </div>
+
+        <div class="faq-item-wrapper">
+          <details class="faq-item">
+            <summary>What is your production and press facility capacity?</summary>
+            <div class="faq-content">
+              <p>Our heavy tooling operations are supported by a 12,000 sq ft built-up manufacturing facility in Dehugaon, Pune, an advanced tryout area equipped with a 10-ton overhead crane, and up to a heavy 1000-ton press capacity situated at Bhamboli, Chakan.</p>
+            </div>
+          </details>
+        </div>
+
+        <div class="faq-item-wrapper">
+          <details class="faq-item">
+            <summary>Do you manufacture for markets outside of Pune?</summary>
+            <div class="faq-content">
+              <p>Yes. While our primary production units are anchored in Pune, we manufacture and validate tools to global export standards. We consistently supply critical components and tooling setups to key industrial automotive hubs across India, including Chennai, Haryana, and Aurangabad.</p>
+            </div>
+          </details>
+        </div>
+
+        <div class="faq-item-wrapper">
+          <details class="faq-item">
+            <summary>What is your typical lead time for custom tool or die manufacturing?</summary>
+            <div class="faq-content">
+              <p>Lead times vary depending entirely on design complexity, part geometry, simulation feedback, and material specifications. Once we review your initial component drawings and requirements, our technical team provides a definitive development timeline spanning raw design to the final trial validation run.</p>
+            </div>
+          </details>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap">
+    <div class="footer-top">
+      <a href="#top" class="logo">
+        <img src="assets/images/logo.png" alt="Rameshwar Engineers Logo" class="logo-mark-img">
+        <div class="logo-text">
+          <b>Rameshwar Engineers</b>
+          <span>Est. 1998</span>
+        </div>
+      </a>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h5>Company</h5>
+          <a href="#about">About Us</a>
+          <a href="#services">Services</a>
+          <a href="#plant">Plant</a>
+        </div>
+        <div class="footer-col">
+          <h5>Work</h5>
+          <a href="#products">Product Gallery</a>
+          <a href="#customers">Customers</a>
+        </div>
+        <div class="footer-col">
+          <h5>Contact</h5>
+          <a href="tel:+919922953455">+91 99229 53455</a>
+          <a href="mailto:kailash72.r@gmail.com">kailash72.r@gmail.com</a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <span>© <span id="yr"></span> Rameshwar Engineers. All rights reserved.</span>
+      
+      <!-- Social Media Icons Row -->
+      <div class="footer-socials">
+        <!-- LinkedIn -->
+        <a href="https://linkedin.com/company/rameshwar-engineers" target="_blank" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+        </a>
+        <!-- Facebook -->
+        <a href="https://facebook.com/rameshwarengineers" target="_blank" aria-label="Facebook">
+          <svg viewBox="0 0 24 24"><path d="M12 2.04c-5.5 0-10 4.49-10 10.02c0 5 3.66 9.15 8.44 9.9v-7H7.9v-2.9h2.54V9.85c0-2.51 1.49-3.89 3.78-3.89c1.09 0 2.23.19 2.23.19v2.47h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.45 2.9h-2.33v7c4.78-.75 8.44-4.9 8.44-9.9c0-5.53-4.5-10.02-10-10.02z"/></svg>
+        </a>
+        <!-- IndiaMART / B2B Industrial Icon Alternate -->
+        <a href="https://www.indiamart.com/rameshwar-engineers" target="_blank" aria-label="IndiaMART Marketplace">
+          <svg viewBox="0 0 24 24"><path d="M12 2L2 22h20L12 2zm0 4.3l6.5 13H5.5L12 6.3zm-1 3.2v4h2v-4h-2zm0 5.5v2h2v-2h-2z"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<div class="lightbox" id="lightbox">
+  <div class="lb-close" id="lbClose">&times;</div>
+  <img id="lbImg" src="" alt="">
+  <div class="lb-cap" id="lbCap"></div>
+</div>
+
+<script>
+  // header scroll state
+  const header = document.getElementById('siteHeader');
+  window.addEventListener('scroll', () => {
+    header.classList.toggle('scrolled', window.scrollY > 40);
+  });
+
+  // mobile nav
+  const burger = document.getElementById('burger');
+  const mobileNav = document.getElementById('mobileNav');
+  burger.addEventListener('click', () => {
+    burger.classList.toggle('open');
+    mobileNav.classList.toggle('open');
+  });
+  mobileNav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    burger.classList.remove('open'); mobileNav.classList.remove('open');
+  }));
+
+  // JS is running — remove the no-JS safety class so reveal animations can take over
+  document.documentElement.classList.remove('no-js');
+
+  // reveal on scroll (generous rootMargin so content is visible well before it's reached)
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold:0.01, rootMargin:'0px 0px -5% 0px' });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  // Safety net: if anything is somehow missed, reveal everything shortly after load
+  setTimeout(() => document.querySelectorAll('.reveal:not(.in)').forEach(el => el.classList.add('in')), 1200);
+
+  // gallery filter
+  const tabs = document.querySelectorAll('.gtab');
+  const items = document.querySelectorAll('.g-item');
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      tabs.forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+      const f = tab.dataset.filter;
+      items.forEach(it => {
+        it.style.display = (f === 'all' || it.dataset.cat === f) ? '' : 'none';
+      });
+    });
+  });
+
+  // lightbox
+  const lightbox = document.getElementById('lightbox');
+  const lbImg = document.getElementById('lbImg');
+  const lbCap = document.getElementById('lbCap');
+  document.querySelectorAll('.g-item').forEach(it => {
+    it.addEventListener('click', () => {
+      const img = it.querySelector('img');
+      lbImg.src = img.src;
+      lbCap.textContent = it.querySelector('.g-caption')?.textContent || '';
+      lightbox.classList.add('open');
+    });
+  });
+  document.getElementById('lbClose').addEventListener('click', () => lightbox.classList.remove('open'));
+  lightbox.addEventListener('click', (e) => { if(e.target === lightbox) lightbox.classList.remove('open'); });
+  document.addEventListener('keydown', (e) => { if(e.key === 'Escape') lightbox.classList.remove('open'); });
+
+  // footer year
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  // enquiry form (no backend — friendly no-op)
+  document.querySelector('form.enquiry').addEventListener('submit', function(e){
+    e.preventDefault();
+    const btn = this.querySelector('button');
+    const original = btn.textContent;
+    btn.textContent = 'Message Noted ✓';
+    setTimeout(() => { btn.textContent = original; this.reset(); }, 2200);
+  }.bind(document.querySelector('form.enquiry')));
+</script>
+</body>
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>404 - Page Not Found | Rameshwar Engineers</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="shortcut icon" href="assets/images/logo.png" type="image/x-icon">
+
+<style>
+  :root {
+    --bg: #ffffff;
+    --surface: #f5f6f7;
+    --surface-2: #eef0f2;
+    --steel-line: #e2e5e9;
+    --text: #12161c;
+    --text-dim: #5b6470;
+    --text-dimmer: #913420;
+    --amber: #913420;
+    --amber-soft: #f2a63d;
+    --amber-text: #9c5c0c;
+    --hazard-y: #ffc72c;
+    --hazard-k: #141414;
+    --radius: 2px;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  
+  body {
+    background: var(--surface);
+    color: var(--text);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 24px;
+    -webkit-font-smoothing: antialiased;
+    overflow: hidden;
+  }
+
+  .error-container {
+    background: var(--bg);
+    border: 1px solid var(--steel-line);
+    padding: 60px 40px;
+    max-width: 560px;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 16px 48px rgba(18, 22, 28, 0.04);
+  }
+
+  /* Structural industrial accent */
+  .error-container::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; height: 4px;
+    background: repeating-linear-gradient(-45deg, var(--hazard-y) 0 10px, var(--hazard-k) 10px 20px);
+  }
+
+  .error-code {
+    font-family: 'Oswald', sans-serif;
+    font-size: clamp(80px, 12vw, 120px);
+    line-height: 1;
+    font-weight: 700;
+    color: var(--text);
+    letter-spacing: -0.02em;
+    margin-bottom: 10px;
+  }
+
+  .eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-size: 12px;
+    color: var(--amber-text);
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 24px;
+  }
+
+  .eyebrow::before, .eyebrow::after {
+    content: "";
+    width: 16px; height: 2px;
+    background: var(--amber-text);
+  }
+
+  h1 {
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    font-size: 24px;
+    letter-spacing: 0.02em;
+    font-weight: 600;
+    margin-bottom: 16px;
+  }
+
+  p {
+    color: var(--text-dim);
+    font-size: 15px;
+    margin-bottom: 32px;
+  }
+
+  .countdown-notice {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    color: var(--text-dimmer);
+    margin-top: 24px;
+  }
+
+  /* Utility Buttons matching index.html */
+  .btn-group {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 13px 26px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    border-radius: var(--radius);
+    cursor: pointer;
+    text-decoration: none;
+    border: 1px solid transparent;
+    transition: transform .18s ease, background .18s ease, border-color .18s ease, color .18s ease;
+    white-space: nowrap;
+  }
+
+  .btn:hover { transform: translateY(-2px); }
+  .btn-amber { background: var(--amber); color: #fff; }
+  .btn-amber:hover { background: #732818; }
+  .btn-ghost { border-color: var(--steel-line); color: var(--text); }
+  .btn-ghost:hover { border-color: var(--amber-text); color: var(--amber-text); }
+
+  @media (max-width: 480px) {
+    .error-container { padding: 40px 20px; }
+    .btn { width: 100%; }
+    .btn-group { flex-direction: column; gap: 8px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="error-container">
+  <div class="error-code">404</div>
+  
+  <div class="eyebrow">System Exception</div>
+  
+  <h1>Component Not Found</h1>
+  <p>The routing path or tooling specification you requested is unavailable. The page may have moved, or the URL address was input incorrectly.</p>
+  
+  <div class="btn-group">
+    <a href="index.html" class="btn btn-amber">Return to Homepage</a>
+    <a href="index.html#contact" class="btn btn-ghost">Report an Issue</a>
+  </div>
+
+  <div class="countdown-notice">
+    Auto-routing back to secure floor in <span id="timer">15</span> seconds...
+  </div>
+</div>
+
+<script>
+  // Automatic safety routing back to homepage
+  let seconds = 15;
+  const timerElement = document.getElementById('timer');
+  
+  const countdown = setInterval(() => {
+    seconds--;
+    timerElement.textContent = seconds;
+    if (seconds <= 0) {
+      clearInterval(countdown);
+      window.location.href = 'index.html';
+    }
+  }, 1000);
+</script>
+
+</body>
+</html>

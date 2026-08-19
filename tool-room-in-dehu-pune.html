@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Precision Tool Room in Dehu, Pune | Press Tools, Dies &amp; VMC Machining</title>
+  <meta name="description" content="State-of-the-art tool room in Dehu, Pune by Rameshwar Engineers. Advanced VMC machining, press tool design, heavy stamping dies, jig fixtures, and tryout facilities.">
+  <meta name="keywords" content="Tool Room in Dehu Pune, Press Tool Manufacturer Pune, Die Shop Dehugaon, VMC Machining Dehu, Jig and Fixtures Manufacturing, Onkar Dies, Rameshwar Group">
+  
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="assets/images/logo.png" type="image/x-icon">
+  
+  <style>
+    :root {
+      --bg: #ffffff;
+      --surface: #f5f6f7;
+      --surface-2: #eef0f2;
+      --steel-line: #e2e5e9;
+      --text: #12161c;
+      --text-dim: #5b6470;
+      --text-dimmer: #913420;
+      --amber: #e08a1e;
+      --amber-soft: #f2a63d;
+      --amber-dark: #b97c22;
+      --amber-text: #9c5c0c;
+      --hazard-y: #ffc72c;
+      --hazard-k: #141414;
+      --blue: #2f7dab;
+      --radius: 2px;
+      --maxw: 1200px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+    ul { list-style: none; }
+
+    h1, h2, h3, h4 {
+      font-family: 'Oswald', sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+      font-weight: 600;
+      line-height: 1.15;
+    }
+
+    .eyebrow {
+      font-family: 'JetBrains Mono', monospace;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      font-size: 12px;
+      color: var(--amber-text);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+    .eyebrow::before {
+      content: "";
+      width: 22px; height: 2px;
+      background: var(--amber-text);
+      display: inline-block;
+    }
+
+    .wrap {
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: 0 32px;
+    }
+    section { padding: 90px 0; position: relative; }
+    @media(max-width: 768px) { section { padding: 60px 0; } .wrap { padding: 0 20px; } }
+
+    .section-head { max-width: 700px; margin-bottom: 48px; }
+    .section-head h2 { font-size: clamp(28px, 4vw, 42px); color: var(--text); }
+    .section-head p { color: var(--text-dim); margin-top: 14px; font-size: 16px; }
+
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      padding: 13px 26px;
+      font-family: 'Inter', sans-serif; font-weight: 600; font-size: 13px;
+      text-transform: uppercase; letter-spacing: 0.06em;
+      border-radius: var(--radius);
+      cursor: pointer; border: 1px solid transparent;
+      transition: transform .18s ease, background .18s ease, border-color .18s ease, color .18s ease;
+      white-space: nowrap;
+    }
+    .btn:hover { transform: translateY(-2px); }
+    .btn-amber { background: var(--amber); color: #181205; }
+    .btn-amber:hover { background: var(--amber-soft); }
+    .btn-ghost { border-color: var(--steel-line); color: var(--text); background: transparent; }
+    .btn-ghost:hover { border-color: var(--amber-text); color: var(--amber-text); }
+    .btn-ghost-invert { border: 1px solid rgba(255, 255, 255, 0.55); color: #fff; background: transparent; }
+    .btn-ghost-invert:hover { border-color: #fff; background: rgba(255, 255, 255, 0.1); }
+
+    /* ============ HEADER ============ */
+    header {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--steel-line);
+      transition: padding .3s ease, box-shadow .3s ease;
+      padding: 16px 0;
+    }
+    header.scrolled { padding: 10px 0; box-shadow: 0 8px 24px rgba(18, 22, 28, 0.06); }
+    header .wrap { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 28px; }
+    .logo { display: flex; align-items: center; gap: 12px; }
+    .logo-mark-img { height: 44px; width: auto; object-fit: contain; }
+    .logo-text b { display: block; font-size: 16px; letter-spacing: 0.04em; color: var(--text); font-family: 'Oswald', sans-serif; }
+    .logo-text span { display: block; font-size: 11px; letter-spacing: 0.16em; color: var(--text-dimmer); font-family: 'JetBrains Mono', monospace; }
+
+    nav.desktop-nav { display: flex; gap: 28px; justify-self: center; }
+    nav.desktop-nav a { font-size: 13px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-dim); font-weight: 500; }
+    nav.desktop-nav a:hover { color: var(--text); }
+    
+    .header-cta { display: flex; align-items: center; gap: 20px; }
+    .header-phone { font-family: 'JetBrains Mono', monospace; font-size: 13px; color: var(--text-dim); }
+
+    .burger { display: none; width: 26px; height: 20px; position: relative; cursor: pointer; }
+    .burger span { position: absolute; left: 0; width: 100%; height: 2px; background: var(--text); transition: .25s; }
+    .burger span:nth-child(1) { top: 0; }
+    .burger span:nth-child(2) { top: 9px; }
+    .burger span:nth-child(3) { top: 18px; }
+
+    @media(max-width: 900px) {
+      nav.desktop-nav, .header-phone { display: none; }
+      .burger { display: block; }
+    }
+
+    /* ============ PAGE HERO ============ */
+    .page-hero {
+      padding-top: 170px;
+      padding-bottom: 80px;
+      background: linear-gradient(180deg, var(--surface) 0%, var(--bg) 100%);
+      border-bottom: 1px solid var(--steel-line);
+    }
+    .page-hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 48px;
+      align-items: center;
+    }
+    .page-hero h1 {
+      font-size: clamp(32px, 4.5vw, 54px);
+      margin-bottom: 18px;
+    }
+    .page-hero p.lead {
+      font-size: 17px;
+      color: var(--text-dim);
+      margin-bottom: 28px;
+    }
+    .hero-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 24px;
+    }
+    .hero-badge-item {
+      background: var(--surface-2);
+      border: 1px solid var(--steel-line);
+      padding: 8px 14px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      border-radius: var(--radius);
+    }
+    .hero-media-box {
+      border: 1px solid var(--steel-line);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: 0 16px 36px rgba(0,0,0,0.06);
+    }
+    @media(max-width: 900px) {
+      .page-hero-grid { grid-template-columns: 1fr; gap: 32px; }
+    }
+
+    /* ============ TOOL ROOM SPECS ============ */
+    .specs-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .spec-card {
+      background: var(--surface);
+      border: 1px solid var(--steel-line);
+      padding: 28px;
+      border-radius: var(--radius);
+      transition: border-color 0.2s ease, transform 0.2s ease;
+    }
+    .spec-card:hover {
+      border-color: var(--amber);
+      transform: translateY(-3px);
+    }
+    .spec-num {
+      font-family: 'JetBrains Mono', monospace;
+      color: var(--amber-text);
+      font-size: 13px;
+      margin-bottom: 10px;
+    }
+    .spec-card h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+    .spec-card p {
+      font-size: 14px;
+      color: var(--text-dim);
+    }
+    @media(max-width: 900px) {
+      .specs-grid { grid-template-columns: 1fr; }
+    }
+
+    /* ============ MACHINERY / CAPABILITIES ============ */
+    .machinery-section {
+      background: var(--surface);
+      border-top: 1px solid var(--steel-line);
+      border-bottom: 1px solid var(--steel-line);
+    }
+    .machinery-table-wrap {
+      background: var(--bg);
+      border: 1px solid var(--steel-line);
+      border-radius: var(--radius);
+      overflow-x: auto;
+    }
+    table.tech-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 14px;
+    }
+    table.tech-table th {
+      background: var(--surface-2);
+      font-family: 'Oswald', sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 16px 20px;
+      border-bottom: 1px solid var(--steel-line);
+    }
+    table.tech-table td {
+      padding: 16px 20px;
+      border-bottom: 1px solid var(--steel-line);
+      color: var(--text-dim);
+    }
+    table.tech-table tr:last-child td { border-bottom: none; }
+    table.tech-table td strong { color: var(--text); }
+
+    /* ============ GALLERY ============ */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    .g-card {
+      position: relative;
+      background: var(--surface-2);
+      border: 1px solid var(--steel-line);
+      border-radius: var(--radius);
+      overflow: hidden;
+      cursor: pointer;
+      aspect-ratio: 4/3;
+    }
+    .g-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+    .g-card:hover img { transform: scale(1.04); }
+    .g-cap {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      padding: 14px;
+      background: linear-gradient(0deg, rgba(0,0,0,0.85) 0%, transparent 100%);
+      color: #fff;
+      font-size: 13px;
+      font-family: 'JetBrains Mono', monospace;
+    }
+    @media(max-width: 768px) { .gallery-grid { grid-template-columns: 1fr 1fr; } }
+    @media(max-width: 480px) { .gallery-grid { grid-template-columns: 1fr; } }
+
+    /* ============ LOCATION MAP SECTION ============ */
+    .location-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+    .location-info {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .address-box {
+      background: var(--surface);
+      border: 1px solid var(--steel-line);
+      padding: 24px;
+      border-radius: var(--radius);
+      margin-top: 20px;
+    }
+    .address-box p { margin-bottom: 10px; font-size: 14.5px; color: var(--text-dim); }
+    .map-frame {
+      width: 100%;
+      height: 380px;
+      border: 1px solid var(--steel-line);
+      border-radius: var(--radius);
+    }
+    @media(max-width: 900px) { .location-grid { grid-template-columns: 1fr; } }
+
+    /* ============ FOOTER ============ */
+    footer {
+      background: #0d1015;
+      color: #fff;
+      padding: 60px 0 30px 0;
+      border-top: 1px solid #22262e;
+    }
+    .footer-top { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 32px; margin-bottom: 40px; }
+    .footer-col h5 { font-family: 'Oswald', sans-serif; text-transform: uppercase; margin-bottom: 16px; color: var(--amber-soft); }
+    .footer-col a { display: block; color: #a0a6b0; font-size: 13.5px; margin-bottom: 8px; }
+    .footer-col a:hover { color: #fff; }
+    .footer-bottom { border-top: 1px solid #22262e; padding-top: 24px; font-size: 12px; color: #6b7280; display: flex; justify-content: space-between; }
+
+    /* Lightbox */
+    .lightbox { position: fixed; inset: 0; background: rgba(0,0,0,0.9); z-index: 200; display: none; align-items: center; justify-content: center; flex-direction: column; }
+    .lightbox.open { display: flex; }
+    .lightbox img { max-width: 90%; max-height: 80vh; border-radius: 2px; }
+    .lb-cap { color: #fff; margin-top: 12px; font-family: 'JetBrains Mono', monospace; font-size: 13px; }
+    .lb-close { position: absolute; top: 20px; right: 30px; color: #fff; font-size: 32px; cursor: pointer; }
+  </style>
+
+  <!-- Schema.org Tool Room & LocalBusiness Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Rameshwar Engineers - Precision Tool Room",
+    "description": "High-precision tool room facility in Dehu, Pune offering press tools, VMC die manufacturing, jig fixtures, and heavy component tryouts.",
+    "url": "https://www.rameshwarengineers.com/tool-room-in-dehu-pune.html",
+    "logo": "https://www.rameshwarengineers.com/assets/images/logo.png",
+    "telephone": "+91-99229-53455",
+    "email": "kailash72.r@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Gate No. 8/3A, Behind Abhang Weigh Bridge, Dehu Bypass Road, Vitthal Nagar, Dehugaon, Tal. Haveli",
+      "addressLocality": "Pune",
+      "addressRegion": "Maharashtra",
+      "postalCode": "412109",
+      "addressCountry": "IN"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "18.7208",
+      "longitude": "73.7844"
+    },
+    "openingHours": "Mo-Sa 08:30-19:30",
+    "priceRange": "$$"
+  }
+  </script>
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header id="siteHeader">
+  <div class="wrap">
+    <a href="index.html" class="logo">
+      <img src="assets/images/logo.png" alt="Rameshwar Engineers Logo" class="logo-mark-img">
+      <div class="logo-text">
+        <b style="color: #913420;">Rameshwar Engineers</b>
+        <span>Tool Room &amp; Manufacturing</span>
+      </div>
+    </a>
+    <nav class="desktop-nav">
+      <a href="index.html#about">About</a>
+      <a href="index.html#services">Services</a>
+      <a href="tool-room-in-dehu-pune.html" style="color: var(--amber-text); font-weight:700;">Tool Room</a>
+      <a href="index.html#products">Products</a>
+      <a href="index.html#customers">Customers</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+    <div class="header-cta">
+      <span class="header-phone">+91 99229 53455</span>
+      <a href="index.html#contact" class="btn btn-amber">Request Tooling Quote</a>
+    </div>
+    <div class="burger" id="burger"><span></span><span></span><span></span></div>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="page-hero">
+  <div class="wrap">
+    <div class="page-hero-grid">
+      <div>
+        <div class="eyebrow">Dehu, Pune Facility</div>
+        <h1>Precision Tool Room in Dehu, Pune</h1>
+        <p class="lead">
+          Equipped with advanced multi-axis VMC machinery, high-capacity press tryout units, and precision CAD/CAM die design suites—delivering tooling solutions for automotive Tier-1s and industrial manufacturing.
+        </p>
+        <div class="cta-row" style="display:flex; gap:16px;">
+          <a href="#machinery" class="btn btn-amber">Explore Machinery</a>
+          <a href="index.html#contact" class="btn btn-ghost">Schedule Facility Visit</a>
+        </div>
+        <div class="hero-badges">
+          <span class="hero-badge-item">⚡ 12,000 Sq. Ft. Built-up Area</span>
+          <span class="hero-badge-item">⚙️ Multi-Axis VMC Machining</span>
+          <span class="hero-badge-item">🏗️ 10-Ton Overhead Crane</span>
+          <span class="hero-badge-item">📍 Dehu-Chakan Industrial Belt</span>
+        </div>
+      </div>
+      <div class="hero-media-box">
+        <img src="assets/images/toolroom-facility.jpg" alt="Rameshwar Engineers Precision Tool Room Floor in Dehu Pune">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ KEY TOOL ROOM CAPABILITIES ============ -->
+<section id="capabilities">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Full Lifecycle Tooling</div>
+      <h2>Engineered for Extreme Precision &amp; Durability</h2>
+      <p>From 3D tooling simulation to final press tryouts, our Dehu facility handles high-tonnage tooling requirements with tight tolerance controls.</p>
+    </div>
+
+    <div class="specs-grid">
+      <div class="spec-card">
+        <div class="spec-num">01 / DESIGN &amp; SIMULATION</div>
+        <h3>Tool &amp; Die Engineering</h3>
+        <p>Complete CAD/CAM 3D modeling, strip layout optimization, and press tool simulation to prevent split lines, wrinkles, or material thinning before machining.</p>
+      </div>
+
+      <div class="spec-card">
+        <div class="spec-num">02 / VMC MACHINING</div>
+        <h3>High-Speed CNC Machining</h3>
+        <p>Heavy-duty vertical machining centers (VMC) capable of cutting hardened tool steels, die blocks, and complex cavity profiles with sub-micron accuracy.</p>
+      </div>
+
+      <div class="spec-card">
+        <div class="spec-num">03 / PRESS TRYOUT &amp; TESTING</div>
+        <h3>Heavy Tryout Capacity</h3>
+        <p>In-house press trial setups backed by heavy tonnage capabilities, enabling quick initial sample inspection (ISIR) and batch validation.</p>
+      </div>
+
+      <div class="spec-card">
+        <div class="spec-num">04 / JIGS &amp; WELD FIXTURES</div>
+        <h3>Precision Assembly Fixtures</h3>
+        <p>Custom design and fabrication of modular welding, inspection, and machining fixtures for high-volume automotive production lines.</p>
+      </div>
+
+      <div class="spec-card">
+        <div class="spec-num">05 / HOT FORMING DIES</div>
+        <h3>Specialized Casting &amp; Dies</h3>
+        <p>Development of robust hot forming and metal casting dies for 10mm to 16mm thick heavy structural components.</p>
+      </div>
+
+      <div class="spec-card">
+        <div class="spec-num">06 / TOOL MAINTENANCE</div>
+        <h3>Re-sharpening &amp; Refurbishment</h3>
+        <p>Rapid repair, die grinding, re-sharpening, and modification services to extend the operational lifespan of existing customer tooling setup.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MACHINERY TABLE ============ -->
+<section id="machinery" class="machinery-section">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Tooling Infrastructure</div>
+      <h2>Machinery &amp; Equipment List</h2>
+      <p>Our Dehu Tool Room is continuously upgraded with high-grade machinery to ensure swift turnaround times and high manufacturing tolerances.</p>
+    </div>
+
+    <div class="machinery-table-wrap">
+      <table class="tech-table">
+        <thead>
+          <tr>
+            <th>Machine / Equipment</th>
+            <th>Specification / Capacity</th>
+            <th>Primary Application</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Multi-Axis VMC Machines</strong></td>
+            <td>High stroke bed length / Sub-micron accuracy</td>
+            <td>Die cavity cutting, core machining, complex contours</td>
+          </tr>
+          <tr>
+            <td><strong>Heavy Press Tryout Line</strong></td>
+            <td>Up to 1000-Ton Capacity (Chakan Unit)</td>
+            <td>Initial sample trials, stamping runs, component validation</td>
+          </tr>
+          <tr>
+            <td><strong>Overhead Handling Cranes</strong></td>
+            <td>10-Ton Lifting Capacity</td>
+            <td>Safe mounting and positioning of heavy die sets</td>
+          </tr>
+          <tr>
+            <td><strong>Precision Surface &amp; Cylindrical Grinders</strong></td>
+            <td>High-grade surface finishing</td>
+            <td>Punch &amp; die plate flattening, tight clearance fitting</td>
+          </tr>
+          <tr>
+            <td><strong>CAD / CAM Stations</strong></td>
+            <td>3D Parametric Modeling Software</td>
+            <td>Strip layouts, blank development, electrode creation</td>
+          </tr>
+          <tr>
+            <td><strong>Quality Inspection Tools</strong></td>
+            <td>Height Gauges, Hardness Testers, Optical Systems</td>
+            <td>Precision dimensional audit and material verification</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GALLERY ============ -->
+<section id="gallery">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Facility Showcase</div>
+      <h2>Inside Our Dehu Tool Room</h2>
+      <p>Take a look at our shop floor, precision machinery, and active tooling project assemblies.</p>
+    </div>
+
+    <div class="gallery-grid">
+      <div class="g-card" data-title="VMC Machining Center">
+        <img src="assets/images/toolroom-1.jpg" alt="VMC Machining of Press Tool Cavity in Dehu Pune">
+        <div class="g-cap">VMC Die Machining Center</div>
+      </div>
+      <div class="g-card" data-title="Heavy Die Assembly Area">
+        <img src="assets/images/toolroom-2.jpg" alt="Heavy Press Tool Assembly & Maintenance">
+        <div class="g-cap">Heavy Press Tool Assembly Bed</div>
+      </div>
+      <div class="g-card" data-title="Precision Fixture Setup">
+        <img src="assets/images/toolroom-3.jpg" alt="Precision Jig and Fixture Assembly">
+        <div class="g-cap">Custom Welding & Inspection Fixtures</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LOCATION & MAP ============ -->
+<section id="location" style="background: var(--surface); border-top: 1px solid var(--steel-line);">
+  <div class="wrap">
+    <div class="location-grid">
+      <div class="location-info">
+        <div class="eyebrow">Strategic Location</div>
+        <h2>Serving Dehu, Chakan &amp; PCMC Industrial Belt</h2>
+        <p style="color:var(--text-dim); margin-top:12px;">
+          Conveniently situated along the Dehu Bypass Road, our tool room provides seamless connectivity to major automotive hubs in Chakan, Bhosari, Talegaon, and Akurdi.
+        </p>
+
+        <div class="address-box">
+          <h4 style="font-size:16px; margin-bottom:8px;">Rameshwar Engineers (Tool Room Unit)</h4>
+          <p>📍 Gate No. 8/3A, Behind Abhang Weigh Bridge, Dehu Bypass Road, Vitthal Nagar, Dehugaon, Tal. Haveli, Pune - 412109, Maharashtra, India.</p>
+          <p>📞 <strong>Phone:</strong> +91 99229 53455 / +91 98231 69278</p>
+          <p>✉️ <strong>Email:</strong> kailash72.r@gmail.com</p>
+        </div>
+      </div>
+
+      <div>
+        <iframe 
+          class="map-frame" 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3779.626227702677!2d73.7818251!3d18.7208151!2m3!100!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2b700172de123%3A0x0!2zMTjCsDQzJzE0LjkiTiA3M8KwNDYnNTQuNiJF!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-col">
+        <h5>Rameshwar Engineers</h5>
+        <p style="font-size:13px; color:#a0a6b0; max-width:260px; line-height:1.5;">
+          Part of Rameshwar Group (along with Onkar Dies &amp; Tusshar Axles). High-precision tool room &amp; automotive press components since 1998.
+        </p>
+      </div>
+      <div class="footer-col">
+        <h5>Quick Links</h5>
+        <a href="index.html">Home</a>
+        <a href="index.html#about">About Us</a>
+        <a href="tool-room-in-dehu-pune.html">Dehu Tool Room</a>
+        <a href="index.html#products">Product Gallery</a>
+      </div>
+      <div class="footer-col">
+        <h5>Contact</h5>
+        <a href="tel:+919922953455">+91 99229 53455</a>
+        <a href="mailto:kailash72.r@gmail.com">kailash72.r@gmail.com</a>
+        <a href="index.html#contact">Send Inquiry</a>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <span>© <span id="yr"></span> Rameshwar Engineers. All rights reserved.</span>
+      <span>Tool Room Facility located in Dehu, Pune, Maharashtra.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ LIGHTBOX ============ -->
+<div class="lightbox" id="lightbox">
+  <div class="lb-close" id="lbClose">&times;</div>
+  <img id="lbImg" src="" alt="">
+  <div class="lb-cap" id="lbCap"></div>
+</div>
+
+<!-- ============ JAVASCRIPT ============ -->
+<script>
+  // Dynamic header state
+  const header = document.getElementById('siteHeader');
+  window.addEventListener('scroll', () => {
+    header.classList.toggle('scrolled', window.scrollY > 40);
+  });
+
+  // Mobile menu toggle
+  const burger = document.getElementById('burger');
+  burger.addEventListener('click', () => {
+    alert('Navigation menu linked to primary home sections.');
+  });
+
+  // Dynamic Year
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  // Lightbox functionality
+  const lightbox = document.getElementById('lightbox');
+  const lbImg = document.getElementById('lbImg');
+  const lbCap = document.getElementById('lbCap');
+  
+  document.querySelectorAll('.g-card').forEach(card => {
+    card.addEventListener('click', () => {
+      const img = card.querySelector('img');
+      lbImg.src = img.src;
+      lbCap.textContent = card.getAttribute('data-title') || '';
+      lightbox.classList.add('open');
+    });
+  });
+
+  document.getElementById('lbClose').addEventListener('click', () => lightbox.classList.remove('open'));
+  lightbox.addEventListener('click', (e) => { if(e.target === lightbox) lightbox.classList.remove('open'); });
+  document.addEventListener('keydown', (e) => { if(e.key === 'Escape') lightbox.classList.remove('open'); });
+</script>
+
+</body>
+</html>

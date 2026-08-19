@@ -1,0 +1,36 @@
+# ----------------------------------------------------
+# 1. GLOBAL SEARCH ENGINE RULES (Google, Bing, Yahoo)
+# ----------------------------------------------------
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+Disallow: /config/
+Disallow: /search?*
+
+# ----------------------------------------------------
+# 2. AI USER-AGENTS (AI Search, LLMs, and Scrapers)
+# ----------------------------------------------------
+# Allow AI Search Engines to crawl and reference your content
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# ----------------------------------------------------
+# 3. SITEMAP DECLARATION (Crucial for all bots)
+# ----------------------------------------------------
+Sitemap: https://rameshwareng.com/sitemap.xml

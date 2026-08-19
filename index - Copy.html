@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rameshwar Engineers | Press Tools, Dies &amp; Precision Manufacturing</title>
+<meta name="description" content="Rameshwar Engineers (Rameshwar Group) — press tools, dies, jig fixtures, VMC machining and axle/banjo component manufacturing since 1998, Pune, India.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="shortcut icon" href="assets/images/logo.png" type="image/x-icon">
+<style>
+  :root{
+    --bg:#ffffff;
+    --surface:#f5f6f7;
+    --surface-2:#eef0f2;
+    --steel-line:#e2e5e9;
+    --text:#12161c;
+    --text-dim:#5b6470;
+    --text-dimmer:#8b939c;
+    --amber:#e08a1e;
+    --amber-soft:#f2a63d;
+    --amber-dark:#b97c22;
+    --amber-text:#9c5c0c;
+    --hazard-y:#ffc72c;
+    --hazard-k:#141414;
+    --blue:#2f7dab;
+    --radius:2px;
+    --maxw:1200px;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:'Inter',sans-serif;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  img{max-width:100%; display:block;}
+  a{color:inherit; text-decoration:none;}
+  ul{list-style:none;}
+
+  h1,h2,h3,h4{
+    font-family:'Oswald',sans-serif;
+    text-transform:uppercase;
+    letter-spacing:0.02em;
+    font-weight:600;
+    line-height:1.15;
+  }
+  .eyebrow{
+    font-family:'JetBrains Mono',monospace;
+    text-transform:uppercase;
+    letter-spacing:0.18em;
+    font-size:12px;
+    color:var(--amber-text);
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-bottom:14px;
+  }
+  .eyebrow::before{
+    content:"";
+    width:22px; height:2px;
+    background:var(--amber-text);
+    display:inline-block;
+  }
+  .wrap{
+    max-width:var(--maxw);
+    margin:0 auto;
+    padding:0 32px;
+  }
+  section{ padding:110px 0; position:relative; }
+  @media(max-width:768px){ section{ padding:72px 0; } .wrap{ padding:0 20px; } }
+
+  .section-head{ max-width:640px; margin-bottom:56px; }
+  .section-head h2{ font-size:clamp(28px,4vw,42px); color:var(--text); }
+  .section-head p{ color:var(--text-dim); margin-top:14px; font-size:16px; max-width:560px; }
+
+  /* Hazard tag - signature element */
+  .hazard-tag{
+    position:relative;
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    background:var(--hazard-k);
+    color:var(--hazard-y);
+    font-family:'JetBrains Mono',monospace;
+    font-size:11px;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    padding:7px 12px 7px 10px;
+    border-left:10px solid transparent;
+    border-image:repeating-linear-gradient(-45deg,var(--hazard-y) 0 6px,var(--hazard-k) 6px 12px) 10;
+  }
+  .hazard-dot{ width:6px; height:6px; border-radius:50%; background:var(--hazard-y); animation:pulse 1.8s infinite; }
+  @keyframes pulse{ 0%,100%{opacity:1;} 50%{opacity:.35;} }
+
+  /* ============ HEADER ============ */
+  header{
+    position:fixed; top:0; left:0; right:0; z-index:100;
+    background:rgba(255,255,255,0.96);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--steel-line);
+    transition:padding .3s ease, box-shadow .3s ease;
+    padding:20px 0;
+  }
+  header.scrolled{
+    padding:14px 0;
+    box-shadow:0 8px 24px rgba(18,22,28,0.06);
+  }
+  header .wrap{ display:grid; grid-template-columns:auto 1fr auto; align-items:center; gap:28px; }
+  .logo{ display:flex; align-items:center; gap:12px; }
+  .logo-mark{
+    width:42px; height:42px;
+    background:linear-gradient(155deg,var(--surface-2),var(--surface));
+    border:1px solid var(--steel-line);
+    display:flex; align-items:center; justify-content:center;
+    font-family:'Oswald',sans-serif; font-weight:700; font-size:16px;
+    color:var(--amber-text);
+    flex-shrink:0;
+  }
+  .logo-text{ font-family:'Oswald',sans-serif; line-height:1.1; }
+  .logo-text b{ display:block; font-size:15px; letter-spacing:0.04em; color:var(--text); }
+  .logo-text span{ display:block; font-size:10px; letter-spacing:0.16em; color:var(--text-dimmer); font-family:'JetBrains Mono',monospace; margin-top:2px; }
+
+  nav.desktop-nav{ display:flex; gap:32px; justify-self:center; }
+  nav.desktop-nav a{
+    font-size:13px; text-transform:uppercase; letter-spacing:0.08em;
+    color:var(--text-dim); font-weight:500;
+    position:relative; padding-bottom:4px;
+    transition:color .2s;
+  }
+  nav.desktop-nav a:hover{ color:var(--text); }
+  nav.desktop-nav a::after{
+    content:""; position:absolute; left:0; bottom:0; width:0; height:1px; background:var(--amber);
+    transition:width .25s ease;
+  }
+  nav.desktop-nav a:hover::after{ width:100%; }
+
+  .btn{
+    display:inline-flex; align-items:center; justify-content:center; gap:8px;
+    padding:13px 26px;
+    font-family:'Inter',sans-serif; font-weight:600; font-size:13px;
+    text-transform:uppercase; letter-spacing:0.06em;
+    border-radius:var(--radius);
+    cursor:pointer; border:1px solid transparent;
+    transition:transform .18s ease, background .18s ease, border-color .18s ease, color .18s ease;
+    white-space:nowrap;
+  }
+  .btn:hover{ transform:translateY(-2px); }
+  .btn-amber{ background:var(--amber); color:#181205; }
+  .btn-amber:hover{ background:var(--amber-soft); }
+  .btn-ghost{ border-color:var(--steel-line); color:var(--text); background:transparent; }
+  .btn-ghost:hover{ border-color:var(--amber-text); color:var(--amber-text); }
+  .btn-ghost-invert{ border:1px solid rgba(255,255,255,0.55); color:#fff; background:transparent; }
+  .btn-ghost-invert:hover{ border-color:#fff; background:rgba(255,255,255,0.1); }
+  .header-cta{ display:flex; align-items:center; gap:24px; justify-self:end; }
+  .header-phone{ font-family:'JetBrains Mono',monospace; font-size:13px; color:var(--text-dim); display:flex; align-items:center; gap:8px; white-space:nowrap; flex-shrink:0; }
+  .header-phone svg{ width:15px; height:15px; stroke:var(--amber-text); }
+
+  .burger{ display:none; width:26px; height:20px; position:relative; cursor:pointer; }
+  .burger span{ position:absolute; left:0; width:100%; height:2px; background:var(--text); transition:.25s; }
+  .burger span:nth-child(1){ top:0; }
+  .burger span:nth-child(2){ top:9px; }
+  .burger span:nth-child(3){ top:18px; }
+  .burger.open span:nth-child(1){ transform:translateY(9px) rotate(45deg); }
+  .burger.open span:nth-child(2){ opacity:0; }
+  .burger.open span:nth-child(3){ transform:translateY(-9px) rotate(-45deg); }
+
+  .mobile-nav{
+    position:fixed; inset:0; background:var(--bg); z-index:90;
+    display:flex; flex-direction:column; align-items:center; justify-content:center; gap:28px;
+    transform:translateY(-100%); transition:transform .35s ease;
+  }
+  .mobile-nav.open{ transform:translateY(0); }
+  .mobile-nav a{ font-family:'Oswald',sans-serif; font-size:26px; text-transform:uppercase; letter-spacing:0.04em; }
+
+  @media(max-width:900px){
+    nav.desktop-nav, .header-phone{ display:none; }
+    .burger{ display:block; }
+  }
+  @media(max-width:560px){
+    header .wrap{ grid-template-columns:1fr auto; }
+    .header-cta{ display:none; }
+    .logo-text b{ font-size:13.5px; }
+    .logo-text span{ display:none; }
+  }
+
+  /* ============ HERO ============ */
+  .hero{
+    position:relative;
+    min-height:100vh;
+    display:flex;
+    align-items:flex-end;
+    overflow:hidden;
+    color:#fff;
+  }
+  .hero-media{ position:absolute; inset:0; z-index:0; background:#eeeeee; }
+  .hero-media video, .hero-media img{
+    position:absolute; inset:0; width:100%; height:100%; object-fit:cover;
+  }
+  .hero-media::after{
+    content:"";
+    position:absolute; inset:0;
+    background:
+      linear-gradient(0deg, rgba(8,10,13,0.88) 0%, rgba(8,10,13,0.35) 46%, rgba(8,10,13,0.55) 100%),
+      linear-gradient(90deg, rgba(8,10,13,0.55) 0%, rgba(8,10,13,0.05) 55%);
+  }
+  .hero .wrap{
+    position:relative; z-index:2;
+    width:100%;
+    padding-top:220px;
+    padding-bottom:64px;
+  }
+  .hero-copy{ max-width:680px; }
+  .eyebrow-invert{ color:var(--amber-soft); }
+  .eyebrow-invert::before{ background:var(--amber-soft); }
+  .hero h1{
+    font-size:clamp(36px,5.4vw,60px);
+    color:#fff;
+    margin-bottom:20px;
+    text-shadow:0 2px 20px rgba(0,0,0,0.25);
+  }
+  .hero h1 em{ font-style:normal; color:var(--amber-soft); }
+  .hero .lead{ color:rgba(255,255,255,0.82); font-size:17px; max-width:520px; margin-bottom:34px; }
+  .hero .cta-row{ display:flex; gap:16px; flex-wrap:wrap; }
+
+  .hero-tag-float{ margin-top:44px; }
+
+  /* stat strip — sits directly under the hero, on white */
+  .stat-strip{ background:var(--bg); border-bottom:1px solid var(--steel-line); }
+  .stat-row{ display:flex; gap:0; flex-wrap:wrap; padding:32px 0; }
+  .stat{ flex:1; min-width:130px; padding-right:24px; border-left:1px solid var(--steel-line); padding-left:24px; }
+  .stat:first-child{ border-left:none; padding-left:0; }
+  .stat b{ display:block; font-family:'Oswald',sans-serif; font-size:30px; color:var(--amber-text); font-weight:600; }
+  .stat span{ font-size:12px; color:var(--text-dimmer); text-transform:uppercase; letter-spacing:0.06em; }
+  @media(max-width:700px){
+    .stat{ flex:1 1 45%; border-left:none; padding-left:0; border-top:1px solid var(--steel-line); padding-top:16px; margin-top:16px; }
+    .stat:nth-child(1),.stat:nth-child(2){ border-top:none; margin-top:0; padding-top:0; }
+  }
+
+  /* ============ MARQUEE STRIP ============ */
+  .marquee-strip{
+    border-bottom:1px solid var(--steel-line);
+    background:var(--surface);
+    overflow:hidden; white-space:nowrap; padding:16px 0;
+  }
+  .marquee-track{ display:inline-flex; gap:48px; animation:scroll-left 28s linear infinite; }
+  .marquee-strip:hover .marquee-track{ animation-play-state:paused; }
+  @keyframes scroll-left{ from{ transform:translateX(0); } to{ transform:translateX(-50%); } }
+  .marquee-track span{
+    font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:0.12em; text-transform:uppercase; color:var(--text-dimmer);
+    display:inline-flex; align-items:center; gap:12px;
+  }
+  .marquee-track span::before{ content:"◆"; color:var(--amber-text); font-size:9px; }
+
+  /* ============ ABOUT ============ */
+  .about-grid{ display:grid; grid-template-columns:0.9fr 1.1fr; gap:64px; align-items:center; }
+  @media(max-width:900px){ .about-grid{ grid-template-columns:1fr; gap:40px; } }
+  .about-media{ position:relative; }
+  .about-media img{ width:100%; border:1px solid var(--steel-line); }
+  .about-media .plate{
+    position:absolute; bottom:-24px; right:-24px;
+    background:var(--surface); border:1px solid var(--steel-line);
+    padding:18px 22px; max-width:220px;
+  }
+  @media(max-width:600px){ .about-media .plate{ position:static; margin-top:16px; max-width:none; } }
+  .about-media .plate b{ font-family:'Oswald',sans-serif; color:var(--amber-text); font-size:24px; display:block; }
+  .about-media .plate span{ font-size:11px; color:var(--text-dimmer); text-transform:uppercase; letter-spacing:0.06em; }
+
+  .about-copy h2{ font-size:clamp(26px,3.6vw,38px); margin-bottom:20px; }
+  .about-copy p{ color:var(--text-dim); margin-bottom:16px; font-size:15.5px; }
+  .about-copy p strong{ color:var(--text); font-weight:600; }
+
+  .mv-cards{ display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-top:28px; }
+  @media(max-width:560px){ .mv-cards{ grid-template-columns:1fr; } }
+  .mv-card{ border:1px solid var(--steel-line); padding:20px; background:var(--surface); }
+  .mv-card .eyebrow{ margin-bottom:8px; }
+  .mv-card p{ font-size:14px; color:var(--text-dim); margin:0; }
+
+  .entity-row{ display:flex; gap:14px; margin-top:24px; flex-wrap:wrap; }
+  .entity-chip{ border:1px solid var(--steel-line); padding:10px 16px; font-size:12.5px; color:var(--text-dim); font-family:'JetBrains Mono',monospace; }
+  .entity-chip b{ color:var(--amber-text); }
+
+  /* ============ SERVICES ============ */
+  .services-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--steel-line); border:1px solid var(--steel-line); }
+  @media(max-width:900px){ .services-grid{ grid-template-columns:repeat(2,1fr); } }
+  @media(max-width:600px){ .services-grid{ grid-template-columns:1fr; } }
+  .service-card{
+    background:var(--bg); padding:38px 30px;
+    transition:background .25s ease;
+    position:relative;
+  }
+  .service-card:hover{ background:var(--surface); }
+  .service-num{ font-family:'JetBrains Mono',monospace; color:var(--text-dimmer); font-size:12px; margin-bottom:22px; display:block; }
+  .service-card h3{ font-size:19px; color:var(--text); margin-bottom:12px; text-transform:none; letter-spacing:0; }
+  .service-card p{ font-size:14px; color:var(--text-dim); }
+  .service-icon{ width:38px; height:38px; margin-bottom:18px; stroke:var(--amber-text); fill:none; stroke-width:1.4; }
+
+  /* process strip */
+  .process-strip{ margin-top:70px; }
+  .process-track{ display:grid; grid-template-columns:repeat(5,1fr); gap:0; position:relative; }
+  @media(max-width:800px){ .process-track{ grid-template-columns:1fr; gap:18px; } }
+  .process-track::before{
+    content:""; position:absolute; top:19px; left:0; right:0; height:1px; background:var(--steel-line);
+  }
+  @media(max-width:800px){ .process-track::before{ display:none; } }
+  .process-step{ position:relative; padding-right:20px; }
+  .process-step .dot{ width:38px; height:38px; border:1px solid var(--amber-text); border-radius:50%; display:flex; align-items:center; justify-content:center; font-family:'JetBrains Mono',monospace; color:var(--amber-text); font-size:13px; background:var(--bg); position:relative; z-index:2; margin-bottom:16px; }
+  .process-step h4{ font-size:13.5px; text-transform:uppercase; letter-spacing:0.04em; color:var(--text); margin-bottom:6px; }
+  .process-step p{ font-size:12.5px; color:var(--text-dimmer); }
+
+  /* ============ GALLERY ============ */
+  .gallery-tabs{ display:flex; gap:10px; flex-wrap:wrap; margin-bottom:36px; }
+  .gtab{ padding:9px 18px; font-size:12px; text-transform:uppercase; letter-spacing:0.06em; border:1px solid var(--steel-line); color:var(--text-dim); cursor:pointer; background:transparent; font-family:'Inter'; transition:.2s; }
+  .gtab:hover{ border-color:var(--amber-text); color:var(--text); }
+  .gtab.active{ background:var(--amber); border-color:var(--amber); color:#181205; font-weight:600; }
+
+  .gallery-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    grid-auto-rows:200px;
+    gap:6px;
+  }
+  @media(max-width:900px){ .gallery-grid{ grid-template-columns:repeat(2,1fr); grid-auto-rows:170px; } }
+  @media(max-width:520px){ .gallery-grid{ grid-template-columns:1fr 1fr; grid-auto-rows:130px; } }
+  .g-item{ position:relative; overflow:hidden; cursor:pointer; background:var(--surface); }
+  .g-item.tall{ grid-row:span 2; }
+  .g-item.wide{ grid-column:span 2; }
+  .g-item img{ width:100%; height:100%; object-fit:cover; transition:transform .5s ease, filter .4s ease; filter:saturate(0.97) brightness(0.99); }
+  .g-item:hover img{ transform:scale(1.07); filter:saturate(1.05) brightness(1.02); }
+  .g-caption{
+    position:absolute; left:0; right:0; bottom:0; padding:14px 16px 12px;
+    background:linear-gradient(0deg, rgba(0,0,0,.82), transparent);
+    font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.05em; text-transform:uppercase; color:#fff;
+    transform:translateY(4px); opacity:0.92;
+  }
+
+  /* Lightbox */
+  .lightbox{ position:fixed; inset:0; background:rgba(6,8,10,0.94); z-index:200; display:none; align-items:center; justify-content:center; padding:40px; }
+  .lightbox.open{ display:flex; }
+  .lightbox img{ max-width:min(900px,90vw); max-height:80vh; object-fit:contain; border:1px solid var(--steel-line); }
+  .lightbox .lb-cap{ position:absolute; bottom:36px; left:0; right:0; text-align:center; font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:0.08em; color:var(--text-dim); text-transform:uppercase; }
+  .lightbox .lb-close{ position:absolute; top:28px; right:32px; width:40px; height:40px; border:1px solid var(--steel-line); display:flex; align-items:center; justify-content:center; cursor:pointer; color:var(--text); font-size:20px; }
+  .lightbox .lb-close:hover{ border-color:var(--amber); color:var(--amber); }
+
+  /* ============ PLANT / STATS ============ */
+  .plant-section{ background:var(--surface); border-top:1px solid var(--steel-line); border-bottom:1px solid var(--steel-line); }
+  .plant-grid{ display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:center; }
+  @media(max-width:900px){ .plant-grid{ grid-template-columns:1fr; gap:40px; } }
+  .plant-video{ position:relative; border:1px solid var(--steel-line); }
+  .plant-video video{ width:100%; display:block; aspect-ratio:9/16; object-fit:cover; max-height:520px; margin:0 auto;}
+  .spec-list{ display:grid; grid-template-columns:1fr 1fr; gap:1px; background:var(--steel-line); border:1px solid var(--steel-line); margin-top:30px; }
+  .spec-item{ background:var(--surface); padding:18px 20px; }
+  .spec-item b{ display:block; font-family:'Oswald',sans-serif; color:var(--amber-text); font-size:15px; margin-bottom:4px; }
+  .spec-item span{ font-size:12px; color:var(--text-dimmer); text-transform:uppercase; letter-spacing:0.04em; }
+
+  .achieve-list{ margin-top:24px; }
+  .achieve-list li{ display:flex; gap:14px; padding:14px 0; border-bottom:1px solid var(--steel-line); font-size:14.5px; color:var(--text-dim); }
+  .achieve-list li svg{ width:18px; height:18px; stroke:var(--amber-text); flex-shrink:0; margin-top:2px; }
+  .achieve-list li:last-child{ border-bottom:none; }
+
+  /* ============ CUSTOMERS ============ */
+  .customer-grid{ display:grid; grid-template-columns:repeat(6,1fr); gap:1px; background:var(--steel-line); border:1px solid var(--steel-line); }
+  @media(max-width:820px){ .customer-grid{ grid-template-columns:repeat(4,1fr); } }
+  @media(max-width:520px){ .customer-grid{ grid-template-columns:repeat(3,1fr); } }
+  .customer-tile{ background:#ffffff; display:flex; align-items:center; justify-content:center; aspect-ratio:1.4; padding:14px; }
+  .customer-tile img{ max-width:100%; max-height:100%; object-fit:contain; filter:grayscale(0.15); }
+
+  /* ============ CONTACT ============ */
+  .contact-grid{ display:grid; grid-template-columns:1fr 1fr; gap:64px; }
+  @media(max-width:900px){ .contact-grid{ grid-template-columns:1fr; gap:40px; } }
+  .contact-info-card{ border:1px solid var(--steel-line); background:var(--surface); padding:34px; margin-bottom:20px; }
+  .contact-info-card h4{ font-size:12px; color:var(--text-dimmer); letter-spacing:0.1em; margin-bottom:10px; }
+  .contact-info-card p, .contact-info-card a{ font-size:15.5px; color:var(--text); display:block; }
+  .contact-info-card a:hover{ color:var(--amber-text); }
+  .contact-people{ display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-top:8px; }
+  @media(max-width:520px){ .contact-people{ grid-template-columns:1fr; } }
+  .person-card{ border:1px solid var(--steel-line); padding:20px; }
+  .person-card b{ display:block; font-family:'Oswald',sans-serif; font-size:15px; color:var(--text); }
+  .person-card span{ display:block; font-size:12px; color:var(--amber-text); text-transform:uppercase; letter-spacing:0.04em; margin:4px 0 10px; }
+  .person-card a{ font-size:13px; color:var(--text-dim); font-family:'JetBrains Mono',monospace; display:block; margin-bottom:3px; }
+  .person-card a:hover{ color:var(--amber-text); }
+
+  .map-frame{ border:1px solid var(--steel-line); overflow:hidden; height:100%; min-height:380px; filter:grayscale(0.3) contrast(1.05); }
+  .map-frame iframe{ width:100%; height:100%; min-height:380px; border:0; display:block; }
+
+  form.enquiry{ display:flex; flex-direction:column; gap:14px; }
+  form.enquiry input, form.enquiry textarea{
+    background:var(--surface); border:1px solid var(--steel-line); color:var(--text);
+    padding:14px 16px; font-family:'Inter'; font-size:14px; width:100%;
+  }
+  form.enquiry input:focus, form.enquiry textarea:focus{ outline:none; border-color:var(--amber-text); }
+  form.enquiry label{ font-size:11px; text-transform:uppercase; letter-spacing:0.08em; color:var(--text-dimmer); margin-bottom:-8px; }
+  form.enquiry textarea{ resize:vertical; min-height:110px; }
+
+  /* ============ FOOTER ============ */
+  footer{ border-top:1px solid var(--steel-line); padding:50px 0 30px; }
+  .footer-top{ display:flex; justify-content:space-between; flex-wrap:wrap; gap:30px; padding-bottom:36px; }
+  .footer-links{ display:flex; gap:60px; flex-wrap:wrap; }
+  .footer-col h5{ font-size:11px; color:var(--text-dimmer); text-transform:uppercase; letter-spacing:0.1em; margin-bottom:14px; }
+  .footer-col a{ display:block; font-size:13.5px; color:var(--text-dim); margin-bottom:9px; }
+  .footer-col a:hover{ color:var(--amber-text); }
+  .footer-bottom{ display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px; border-top:1px solid var(--steel-line); padding-top:24px; font-size:12px; color:var(--text-dimmer); }
+
+  /* reveal animation */
+  .reveal{ opacity:0; transform:translateY(16px); transition:opacity .5s ease, transform .5s ease; }
+  .reveal.in{ opacity:1; transform:translateY(0); }
+  @media(prefers-reduced-motion:reduce){
+    .reveal{ opacity:1; transform:none; transition:none; }
+  }
+  /* no-JS fallback: never leave content invisible */
+  .no-js .reveal{ opacity:1; transform:none; }
+
+  @media(max-width:480px){
+    .eyebrow{ display:block; }
+    .eyebrow::before{ display:block; margin-bottom:8px; }
+  }
+
+  ::selection{ background:var(--amber); color:#181205; }
+.logo-mark img {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+    display: block;
+}
+</style>
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header id="siteHeader">
+<div class="wrap">
+    <a href="#top" class="logo">
+        <div class="logo-mark">
+            <img src="assets/images/logo.png" alt="Rameshwar Engineers Logo">
+        </div>
+    </a>
+</div>
+    <nav class="desktop-nav">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#products">Products</a>
+      <a href="#plant">Plant</a>
+      <a href="#customers">Customers</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="header-cta">
+      <span class="header-phone">
+        <svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        +91 99229 53455
+      </span>
+      <a href="#contact" class="btn btn-amber">Get a Quote</a>
+    </div>
+    <div class="burger" id="burger"><span></span><span></span><span></span></div>
+  </div>
+</header>
+
+<div class="mobile-nav" id="mobileNav">
+  <a href="#about">About</a>
+  <a href="#services">Services</a>
+  <a href="#products">Products</a>
+  <a href="#plant">Plant</a>
+  <a href="#customers">Customers</a>
+  <a href="#contact">Contact</a>
+  <a href="#contact" class="btn btn-amber" style="margin-top:8px;">Get a Quote</a>
+</div>
+
+<div id="top"></div>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="hero-media">
+    <video autoplay muted loop playsinline poster="assets/video/hero-banner-poster.jpg">
+      <source src="assets/video/hero-banner.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div class="wrap">
+    <div class="hero-copy reveal">
+      <div class="eyebrow eyebrow-invert">Press Tools · Dies · Jig Fixtures · VMC Machining</div>
+      <h1>Engineering precision.<br>Manufacturing <em>trust</em> since 1998.</h1>
+      <p class="lead">Rameshwar Engineers designs, tools and manufactures high-performance axle, banjo and critical safety components for the automotive and non-automotive sector — from concept to finished part, across an expanding network of manufacturing units in Pune.</p>
+      <div class="cta-row">
+        <a href="#products" class="btn btn-amber">View Our Work</a>
+        <a href="#contact" class="btn btn-ghost-invert">Talk to Our Team</a>
+      </div>
+      <div class="hero-tag-float">
+        <div class="hazard-tag"><span class="hazard-dot"></span>Precision VMC Machining — Live Floor</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="stat-strip">
+  <div class="wrap">
+    <div class="stat-row reveal">
+      <div class="stat"><b>1998</b><span>Founded</span></div>
+      <div class="stat"><b>22+</b><span>Years Experience</span></div>
+      <div class="stat"><b>Expansion</b><span>Manufacturing Units</span></div>
+      <div class="stat"><b>1000T</b><span>Press Capacity</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ MARQUEE ============ -->
+<div class="marquee-strip">
+  <div class="marquee-track">
+    <span>Press Tools</span><span>Dies &amp; Jig Fixtures</span><span>Hot Forming</span><span>VMC Machining</span><span>Axle &amp; Banjo Housings</span><span>Testing &amp; Validation</span><span>Concept To Product</span>
+    <span>Press Tools</span><span>Dies &amp; Jig Fixtures</span><span>Hot Forming</span><span>VMC Machining</span><span>Axle &amp; Banjo Housings</span><span>Testing &amp; Validation</span><span>Concept To Product</span>
+  </div>
+</div>
+
+<!-- ============ ABOUT ============ -->
+<section id="about">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="about-media reveal">
+        <img src="assets/images/logo-building.jpg" alt="Rameshwar Engineers manufacturing facility, Dehugaon, Pune">
+        <div class="plate">
+          <b>12,000 sq ft</b>
+          <span>Built-up manufacturing area</span>
+        </div>
+      </div>
+      <div class="about-copy reveal">
+        <div class="eyebrow">About Rameshwar Group</div>
+        <h2>A technology &amp; engineering driven development partner</h2>
+        <p><strong>Founded in 1998 by Mr. Kailash Rahangdale</strong>, a technocrat with over 22 years of experience in the engineering &amp; manufacturing industry, Rameshwar Engineers offers concept-to-product design services, engineering &amp; manufacturing solutions, and testing &amp; validation services.</p>
+        <p>We manufacture a wide range of high-performance, critical &amp; safety components for the automotive and non-automotive sector — currently operating and expansion plant in place to meet global growth and customer requirements.</p>
+        <div class="entity-row">
+          <div class="entity-chip"><b>COMPRISES OF ONKAR DIES PVT.LTD AND TUSSHAR AXLES PVT. LTD.</div>
+        </div>
+        <div class="mv-cards">
+          <div class="mv-card">
+            <div class="eyebrow" style="margin-bottom:6px;">Our Mission</div>
+            <p>Partnering our customers to make a difference.</p>
+          </div>
+          <div class="mv-card">
+            <div class="eyebrow" style="margin-bottom:6px;">Our Vision</div>
+            <p>Drive technology to lead innovation across horizons.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVICES ============ -->
+<section id="services" style="background:var(--surface); border-top:1px solid var(--steel-line); border-bottom:1px solid var(--steel-line);">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">What We Do</div>
+      <h2>Concept to product, under one roof</h2>
+      <p>Design, tooling and manufacturing capability built to handle complex processes and components — matched by an expert technical team averaging 15 years of experience.</p>
+    </div>
+    <div class="services-grid reveal">
+      <div class="service-card">
+        <span class="service-num">01</span>
+        <svg class="service-icon" viewBox="0 0 24 24"><path d="M12 20l9-9-9-9-9 9 9 9z"/><path d="M12 8v8M8 12h8"/></svg>
+        <h3>Design &amp; R&amp;D</h3>
+        <p>Concept-to-product design services backed by engineering expertise across critical and safety components.</p>
+      </div>
+      <div class="service-card">
+        <span class="service-num">02</span>
+        <svg class="service-icon" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="12" rx="1"/><path d="M8 7V4h8v3"/></svg>
+        <h3>Press Tools &amp; Dies</h3>
+        <p>Cutting, forming, piercing, blanking and cam-pierce dies manufactured to tight tolerances, 10mm to 16mm thick.</p>
+      </div>
+      <div class="service-card">
+        <span class="service-num">03</span>
+        <svg class="service-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .34 1.87l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.7 1.7 0 0 0-1.87-.34 1.7 1.7 0 0 0-1 1.55V21a2 2 0 0 1-4 0v-.09A1.7 1.7 0 0 0 9 19.4a1.7 1.7 0 0 0-1.87.34l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.7 1.7 0 0 0 4.6 15a1.7 1.7 0 0 0-1.55-1H3a2 2 0 0 1 0-4h.09A1.7 1.7 0 0 0 4.6 9a1.7 1.7 0 0 0-.34-1.87l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.7 1.7 0 0 0 9 4.6a1.7 1.7 0 0 0 1-1.55V3a2 2 0 0 1 4 0v.09a1.7 1.7 0 0 0 1 1.55 1.7 1.7 0 0 0 1.87-.34l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.7 1.7 0 0 0 19.4 9a1.7 1.7 0 0 0 1.55 1H21a2 2 0 0 1 0 4h-.09a1.7 1.7 0 0 0-1.55 1z"/></svg>
+        <h3>Jig &amp; Fixture Manufacturing</h3>
+        <p>Precision jigs and fixtures engineered for repeatable, high-accuracy assembly and machining operations.</p>
+      </div>
+      <div class="service-card">
+        <span class="service-num">04</span>
+        <svg class="service-icon" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="1"/><path d="M9 4v16M4 9h5M4 15h5"/></svg>
+        <h3>VMC Machining &amp; Assembly</h3>
+        <p>Multi-axis VMC machining from 1200×600×700 up to 2800×1800×1000 work envelopes, plus full assembly.</p>
+      </div>
+      <div class="service-card">
+        <span class="service-num">05</span>
+        <svg class="service-icon" viewBox="0 0 24 24"><path d="M4 20h16M6 20V10l6-6 6 6v10M9 20v-6h6v6"/></svg>
+        <h3>Hot Forming &amp; Casting Dies</h3>
+        <p>Hot forming die manufacturing and tooling from 10mm to 16mm thickness for high-strength housings.</p>
+      </div>
+      <div class="service-card">
+        <span class="service-num">06</span>
+        <svg class="service-icon" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg>
+        <h3>Testing &amp; Validation</h3>
+        <p>Rigorous testing and validation services ensuring every critical and safety component meets export standards.</p>
+      </div>
+    </div>
+
+    <div class="process-strip reveal">
+      <div class="eyebrow">Tool Manufacturing Workflow</div>
+      <div class="process-track">
+        <div class="process-step"><div class="dot">01</div><h4>Client Requirement</h4><p>Scope, specification &amp; part drawings</p></div>
+        <div class="process-step"><div class="dot">02</div><h4>Design &amp; R&amp;D</h4><p>Concept and engineering development</p></div>
+        <div class="process-step"><div class="dot">03</div><h4>Simulation</h4><p>Prototyping &amp; process validation</p></div>
+        <div class="process-step"><div class="dot">04</div><h4>Testing</h4><p>Trial runs &amp; quality checks</p></div>
+        <div class="process-step"><div class="dot">05</div><h4>Manufacturing</h4><p>Full-scale production &amp; dispatch</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PRODUCT GALLERY ============ -->
+<section id="products">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Product Gallery</div>
+      <h2>What comes off our floor</h2>
+      <p>A cross-section of dies, tooling, machined components and CAD work spanning axle housings, banjo parts, forming dies and precision machining.</p>
+    </div>
+
+    <div class="gallery-tabs reveal">
+      <button class="gtab active" data-filter="all">All</button>
+      <button class="gtab" data-filter="axle">Axle &amp; Banjo Parts</button>
+      <button class="gtab" data-filter="dies">Dies &amp; Tooling</button>
+      <button class="gtab" data-filter="cad">CAD &amp; Simulation</button>
+      <button class="gtab" data-filter="machining">Machining</button>
+    </div>
+
+    <div class="gallery-grid reveal" id="galleryGrid">
+      <div class="g-item tall" data-cat="axle"><img src="assets/images/part-green.jpg" alt="Banjo half, 4mm thickness"><div class="g-caption">Banjo Half — 4mm Thk.</div></div>
+      <div class="g-item" data-cat="dies"><img src="assets/images/die-red-1.jpg" alt="Precision cutting die"><div class="g-caption">Cutting Die</div></div>
+      <div class="g-item" data-cat="dies"><img src="assets/images/die-steel-1.jpg" alt="Forming die tooling"><div class="g-caption">Forming Die</div></div>
+      <div class="g-item wide" data-cat="dies"><img src="assets/images/hot-form-die.jpg" alt="Hot forming die, PRO-2110"><div class="g-caption">Hot Forming Die — PRO-2110</div></div>
+      <div class="g-item" data-cat="axle"><img src="assets/images/part-blue.jpg" alt="Banjo half, 12mm thickness"><div class="g-caption">Banjo Half — 12mm Thk.</div></div>
+      <div class="g-item tall" data-cat="cad"><img src="assets/images/die-cad-1.jpg" alt="Die cavity CAD simulation"><div class="g-caption">Die Cavity — CAD Sim</div></div>
+      <div class="g-item" data-cat="axle"><img src="assets/images/part-red.jpg" alt="Banjo half hot form, 14mm thickness"><div class="g-caption">Banjo Half Hot Form — 14mm</div></div>
+      <div class="g-item" data-cat="cad"><img src="assets/images/die-cad-2.jpg" alt="Die cavity CAD render, blue and orange"><div class="g-caption">Die Cavity — CAD Render</div></div>
+      <div class="g-item wide" data-cat="dies"><img src="assets/images/blank-die.jpg" alt="RE-130 blank die, reinforcement bracket steering column"><div class="g-caption">RE-130 Blank Die</div></div>
+      <div class="g-item" data-cat="machining"><img src="assets/images/vmc-1.jpg" alt="VMC machining centre"><div class="g-caption">VMC Machining Centre</div></div>
+      <div class="g-item" data-cat="machining"><img src="assets/images/vmc-2.jpg" alt="VMC machining centre, large envelope"><div class="g-caption">VMC — Large Envelope</div></div>
+      <div class="g-item" data-cat="axle"><img src="assets/images/part-alt.jpg" alt="Banjo half, 7mm thickness"><div class="g-caption">Banjo Half — 7mm Thk.</div></div>
+      <div class="g-item" data-cat="dies"><img src="assets/images/flange-die.jpg" alt="RE-132 flange die"><div class="g-caption">RE-132 Flange Die</div></div>
+      <div class="g-item wide" data-cat="axle"><img src="assets/images/axle-assembly.jpg" alt="Axle housing assembly"><div class="g-caption">Axle Housing Assembly</div></div>
+      <div class="g-item" data-cat="dies"><img src="assets/images/die-cavity.jpg" alt="Die cavity block, machined"><div class="g-caption">Die Cavity Block</div></div>
+      <div class="g-item" data-cat="dies"><img src="assets/images/die-green-form.jpg" alt="Forming die, green mould base"><div class="g-caption">Forming Die Set</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PLANT / INFRASTRUCTURE ============ -->
+<section id="plant" class="plant-section">
+  <div class="wrap">
+    <div class="plant-grid">
+      <div class="reveal" style="order:2;">
+        <div class="eyebrow">Inside The Plant</div>
+        <h2 style="font-size:clamp(26px,3.6vw,36px); margin-bottom:18px;">Infrastructure built for heavy tooling</h2>
+        <p style="color:var(--text-dim); font-size:15.5px; margin-bottom:6px;">Robust infrastructure to match large-scale demand, with the technical capability to handle complex processes and components — including the design, development and supply of the Isuzu Eicher rear Banjo axle.</p>
+
+        <ul class="achieve-list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg> Expert technical team with an average experience of 15 years</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg> Export standards — supplying to Chennai, Haryana &amp; Aurangabad</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg> Designed, developed &amp; supplied the Isuzu Eicher rear Banjo axle</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg> Innovative application of latest technologies for high-value components</li>
+        </ul>
+
+        <div class="spec-list">
+          <div class="spec-item"><b>1000 Ton</b><span>Press — Bhamboli, Chakan</span></div>
+          <div class="spec-item"><b>10 Tonnage</b><span>Overhead Crane + Tryout Area</span></div>
+          <div class="spec-item"><b>12,000 sq ft</b><span>Built-up Manufacturing Area</span></div>
+          <div class="spec-item"><b>4 VMC Units</b><span>Up to 2800×1800×1000mm</span></div>
+        </div>
+      </div>
+
+      <div class="reveal" style="order:1;">
+        <div class="plant-video">
+          <video autoplay muted loop playsinline>
+            <source src="assets/video/press.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CUSTOMERS ============ -->
+<section id="customers">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Esteemed Customers</div>
+      <h2>Trusted across the automotive supply chain</h2>
+      <p>We manufacture critical tooling and components for leading names in automotive engineering and forging.</p>
+    </div>
+    <div class="customer-grid reveal">
+      <div class="customer-tile"><img src="assets/images/customers/reliable.png" alt="Reliable"></div>
+      <div class="customer-tile"><img src="assets/images/customers/planetto.png" alt="Planetto Tooltech"></div>
+      <div class="customer-tile"><img src="assets/images/customers/takshi.png" alt="Takshi Auto Components"></div>
+      <div class="customer-tile"><img src="assets/images/customers/rsb.png" alt="RSB"></div>
+      <div class="customer-tile"><img src="assets/images/customers/indo-toolings.png" alt="Indo Toolings"></div>
+      <div class="customer-tile"><img src="assets/images/customers/bharat-forge.png" alt="Bharat Forge"></div>
+      <div class="customer-tile"><img src="assets/images/customers/omno.png" alt="Nagata Group / OMNO"></div>
+      <div class="customer-tile"><img src="assets/images/customers/sinter.png" alt="Customer partner"></div>
+      <div class="customer-tile"><img src="assets/images/customers/prijai.png" alt="Prijai"></div>
+      <div class="customer-tile"><img src="assets/images/customers/track.png" alt="Track Components Ltd"></div>
+      <div class="customer-tile"><img src="assets/images/customers/skh.png" alt="SKH"></div>
+      <div class="customer-tile" style="background:var(--surface); display:flex; align-items:center; justify-content:center;">
+        <span style="font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--text-dimmer); text-align:center; padding:0 10px;">+ MORE PARTNERS</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section id="contact" style="background:var(--surface); border-top:1px solid var(--steel-line);">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Get In Touch</div>
+      <h2>Start a conversation about your tooling needs</h2>
+      <p>Reach out for design, tooling or manufacturing enquiries — our team responds directly.</p>
+    </div>
+
+    <div class="contact-grid">
+      <div class="reveal">
+        <div class="contact-info-card">
+          <h4>Registered Office</h4>
+          <p>Gate No. 8/3A, Behind Abhang Weigh Bridge,<br>Dehu Bypass Road, Vitthal Nagar,<br>Dehugaon, Tal. Haveli, Dist. Pune – 412109</p>
+        </div>
+        <div class="contact-people">
+          <div class="person-card">
+            <b>Kailash Rahangdale</b>
+            <span>Managing Director</span>
+            <a href="tel:+919922953455">+91 99229 53455</a>
+            <a href="mailto:kailash72.r@gmail.com">kailash72.r@gmail.com</a>
+          </div>
+          <div class="person-card">
+            <b>Dadasaheb Shinde</b>
+            <span>Design &amp; Tool Mfg. Head</span>
+            <a href="tel:+919823169278">+91 98231 69278</a>
+            <a href="mailto:rameshwareng789@gmail.com">rameshwareng789@gmail.com</a>
+          </div>
+        </div>
+
+        <form class="enquiry" style="margin-top:24px;">
+          <label>Your Name</label>
+          <input type="text" placeholder="Full name" required>
+          <label>Email / Phone</label>
+          <input type="text" placeholder="you@company.com" required>
+          <label>Message</label>
+          <textarea placeholder="Tell us about your requirement..."></textarea>
+          <button type="submit" class="btn btn-amber" style="margin-top:6px; align-self:flex-start;">Send Enquiry</button>
+        </form>
+      </div>
+
+      <div class="reveal map-frame">
+        <iframe loading="lazy" src="https://www.google.com/maps?q=Dehugaon%2C%20Vitthal%20Nagar%2C%20Tal.%20Haveli%2C%20Dist.%20Pune%20412109&output=embed"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="logo">
+        <div class="logo-mark">RE</div>
+        <div class="logo-text">
+          <b>Rameshwar Engineers</b>
+          <!---<span>Rameshwar Engineers</span>--->
+        </div>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h5>Company</h5>
+          <a href="#about">About Us</a>
+          <a href="#services">Services</a>
+          <a href="#plant">Plant</a>
+        </div>
+        <div class="footer-col">
+          <h5>Work</h5>
+          <a href="#products">Product Gallery</a>
+          <a href="#customers">Customers</a>
+        </div>
+        <div class="footer-col">
+          <h5>Contact</h5>
+          <a href="tel:+919922953455">+91 99229 53455</a>
+          <a href="mailto:kailash72.r@gmail.com">kailash72.r@gmail.com</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="yr"></span> Rameshwar Engineers / Rameshwar Group. All rights reserved.</span>
+     <!-- <span>Onkar Dies Pvt. Ltd. · Tusshar Axles Pvt. Ltd. · Pune, India</span>--->
+    </div>
+  </div>
+</footer>
+
+<div class="lightbox" id="lightbox">
+  <div class="lb-close" id="lbClose">&times;</div>
+  <img id="lbImg" src="" alt="">
+  <div class="lb-cap" id="lbCap"></div>
+</div>
+
+<script>
+  // header scroll state
+  const header = document.getElementById('siteHeader');
+  window.addEventListener('scroll', () => {
+    header.classList.toggle('scrolled', window.scrollY > 40);
+  });
+
+  // mobile nav
+  const burger = document.getElementById('burger');
+  const mobileNav = document.getElementById('mobileNav');
+  burger.addEventListener('click', () => {
+    burger.classList.toggle('open');
+    mobileNav.classList.toggle('open');
+  });
+  mobileNav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    burger.classList.remove('open'); mobileNav.classList.remove('open');
+  }));
+
+  // JS is running — remove the no-JS safety class so reveal animations can take over
+  document.documentElement.classList.remove('no-js');
+
+  // reveal on scroll (generous rootMargin so content is visible well before it's reached)
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold:0.01, rootMargin:'0px 0px -5% 0px' });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  // Safety net: if anything is somehow missed, reveal everything shortly after load
+  setTimeout(() => document.querySelectorAll('.reveal:not(.in)').forEach(el => el.classList.add('in')), 1200);
+
+  // gallery filter
+  const tabs = document.querySelectorAll('.gtab');
+  const items = document.querySelectorAll('.g-item');
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      tabs.forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+      const f = tab.dataset.filter;
+      items.forEach(it => {
+        it.style.display = (f === 'all' || it.dataset.cat === f) ? '' : 'none';
+      });
+    });
+  });
+
+  // lightbox
+  const lightbox = document.getElementById('lightbox');
+  const lbImg = document.getElementById('lbImg');
+  const lbCap = document.getElementById('lbCap');
+  document.querySelectorAll('.g-item').forEach(it => {
+    it.addEventListener('click', () => {
+      const img = it.querySelector('img');
+      lbImg.src = img.src;
+      lbCap.textContent = it.querySelector('.g-caption')?.textContent || '';
+      lightbox.classList.add('open');
+    });
+  });
+  document.getElementById('lbClose').addEventListener('click', () => lightbox.classList.remove('open'));
+  lightbox.addEventListener('click', (e) => { if(e.target === lightbox) lightbox.classList.remove('open'); });
+  document.addEventListener('keydown', (e) => { if(e.key === 'Escape') lightbox.classList.remove('open'); });
+
+  // footer year
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  // enquiry form (no backend — friendly no-op)
+  document.querySelector('form.enquiry').addEventListener('submit', function(e){
+    e.preventDefault();
+    const btn = this.querySelector('button');
+    const original = btn.textContent;
+    btn.textContent = 'Message Noted ✓';
+    setTimeout(() => { btn.textContent = original; this.reset(); }, 2200);
+  }.bind(document.querySelector('form.enquiry')));
+</script>
+</body>
+</html>
