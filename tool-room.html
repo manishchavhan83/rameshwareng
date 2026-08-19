@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Precision Tool Room | Rameshwar Engineers – Dies, Molds & Fixtures</title>
+    <meta name="description" content="State-of-the-art precision tool room at Rameshwar Engineers. We specialize in design, manufacturing, and maintenance of high-quality press tools, dies, jigs, and fixtures.">
+    <meta name="keywords" content="Tool Room Pune, Precision Dies Pune, Press Tools, Jig and Fixture Manufacturer, Rameshwar Group">
+    
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="assets/images/logo.png" type="image/x-icon">
+    
+    <style>
+        :root {
+            --bg: #ffffff;
+            --surface: #f5f6f7;
+            --surface-2: #eef0f2;
+            --steel-line: #e2e5e9;
+            --text: #12161c;
+            --text-dim: #5b6470;
+            --text-dimmer: #913420;
+            --amber: #e08a1e;
+            --amber-soft: #f2a63d;
+            --amber-dark: #b97c22;
+            --amber-text: #9c5c0c;
+            --hazard-y: #ffc72c;
+            --hazard-k: #141414;
+            --blue: #2f7dab;
+            --radius: 2px;
+            --maxw: 1200px;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+        img { max-width: 100%; display: block; }
+        a { color: inherit; text-decoration: none; }
+        ul { list-style: none; }
+
+        h1, h2, h3, h4 {
+            font-family: 'Oswald', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 0.02em;
+            font-weight: 600;
+            line-height: 1.15;
+        }
+
+        .eyebrow {
+            font-family: 'JetBrains Mono', monospace;
+            text-transform: uppercase;
+            letter-spacing: 0.18em;
+            font-size: 12px;
+            color: var(--amber-text);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 14px;
+        }
+        .eyebrow::before {
+            content: "";
+            width: 22px; height: 2px;
+            background: var(--amber-text);
+            display: inline-block;
+        }
+
+        .wrap {
+            max-width: var(--maxw);
+            margin: 0 auto;
+            padding: 0 32px;
+        }
+        section { padding: 90px 0; position: relative; }
+        @media(max-width: 768px) { section { padding: 60px 0; } .wrap { padding: 0 20px; } }
+
+        .section-head { max-width: 700px; margin-bottom: 48px; }
+        .section-head h2 { font-size: clamp(28px, 4vw, 42px); color: var(--text); }
+        .section-head p { color: var(--text-dim); margin-top: 14px; font-size: 16px; }
+
+        .btn {
+            display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+            padding: 13px 26px;
+            font-family: 'Inter', sans-serif; font-weight: 600; font-size: 13px;
+            text-transform: uppercase; letter-spacing: 0.06em;
+            border-radius: var(--radius);
+            cursor: pointer; border: 1px solid transparent;
+            transition: transform .18s ease, background .18s ease, border-color .18s ease, color .18s ease;
+            white-space: nowrap;
+        }
+        .btn:hover { transform: translateY(-2px); }
+        .btn-amber { background: var(--amber); color: #181205; }
+        .btn-amber:hover { background: var(--amber-soft); }
+        .btn-ghost { border-color: var(--steel-line); color: var(--text); background: transparent; }
+        .btn-ghost:hover { border-color: var(--amber-text); color: var(--amber-text); }
+        .btn-ghost-invert { border: 1px solid rgba(255, 255, 255, 0.55); color: #fff; background: transparent; }
+        .btn-ghost-invert:hover { border-color: #fff; background: rgba(255, 255, 255, 0.1); }
+
+        /* ============ HEADER ============ */
+        header {
+            position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+            background: rgba(255, 255, 255, 0.96);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--steel-line);
+            transition: padding .3s ease, box-shadow .3s ease;
+            padding: 16px 0;
+        }
+        header.scrolled { padding: 10px 0; box-shadow: 0 8px 24px rgba(18, 22, 28, 0.06); }
+        header .wrap { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 28px; }
+        .logo { display: flex; align-items: center; gap: 12px; }
+        .logo-mark-img { height: 44px; width: auto; object-fit: contain; }
+        .logo-text b { display: block; font-size: 16px; letter-spacing: 0.04em; color: var(--text); font-family: 'Oswald', sans-serif; }
+        .logo-text span { display: block; font-size: 11px; letter-spacing: 0.16em; color: var(--text-dimmer); font-family: 'JetBrains Mono', monospace; }
+
+        nav.desktop-nav { display: flex; gap: 28px; justify-self: center; }
+        nav.desktop-nav a { font-size: 13px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-dim); font-weight: 500; }
+        nav.desktop-nav a:hover { color: var(--text); }
+        
+        .header-cta { display: flex; align-items: center; gap: 20px; }
+        .header-phone { font-family: 'JetBrains Mono', monospace; font-size: 13px; color: var(--text-dim); }
+
+        .burger { display: none; width: 26px; height: 20px; position: relative; cursor: pointer; }
+        .burger span { position: absolute; left: 0; width: 100%; height: 2px; background: var(--text); transition: .25s; }
+        .burger span:nth-child(1) { top: 0; }
+        .burger span:nth-child(2) { top: 9px; }
+        .burger span:nth-child(3) { top: 18px; }
+
+        @media(max-width: 900px) {
+          nav.desktop-nav, .header-phone { display: none; }
+          .burger { display: block; }
+        }
+
+        /* ============ PAGE HERO ============ */
+        .page-hero {
+            padding-top: 170px;
+            padding-bottom: 80px;
+            background: linear-gradient(180deg, var(--surface) 0%, var(--bg) 100%);
+            border-bottom: 1px solid var(--steel-line);
+        }
+        .page-hero-grid {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 48px;
+            align-items: center;
+        }
+        .page-hero h1 {
+            font-size: clamp(32px, 4.5vw, 54px);
+            margin-bottom: 18px;
+        }
+        .page-hero p.lead {
+            font-size: 17px;
+            color: var(--text-dim);
+            margin-bottom: 28px;
+        }
+        .hero-media-box {
+            border: 1px solid var(--steel-line);
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: 0 16px 36px rgba(0,0,0,0.06);
+        }
+        @media(max-width: 900px) {
+          .page-hero-grid { grid-template-columns: 1fr; gap: 32px; }
+        }
+
+        /* ============ CAPABILITIES GRID ============ */
+        .capabilities-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+        .cap-card {
+            background: var(--surface);
+            border: 1px solid var(--steel-line);
+            padding: 32px;
+            border-radius: var(--radius);
+            transition: border-color 0.2s ease;
+        }
+        .cap-card:hover {
+            border-color: var(--amber);
+        }
+        .cap-num {
+            font-family: 'JetBrains Mono', monospace;
+            color: var(--amber-text);
+            font-size: 13px;
+            margin-bottom: 10px;
+        }
+        .cap-card h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        .cap-card p {
+            font-size: 14px;
+            color: var(--text-dim);
+        }
+        @media(max-width: 900px) {
+          .capabilities-grid { grid-template-columns: 1fr; }
+        }
+
+        /* ============ MACHINERY / TECH TABLE ============ */
+        .machinery-section {
+            background: var(--surface);
+            border-top: 1px solid var(--steel-line);
+            border-bottom: 1px solid var(--steel-line);
+        }
+        .tech-table-wrap {
+            background: var(--bg);
+            border: 1px solid var(--steel-line);
+            border-radius: var(--radius);
+            overflow-x: auto;
+        }
+        table.tech-table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+            font-size: 14px;
+        }
+        table.tech-table th {
+            background: var(--surface-2);
+            font-family: 'Oswald', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            padding: 16px 20px;
+            border-bottom: 1px solid var(--steel-line);
+        }
+        table.tech-table td {
+            padding: 16px 20px;
+            border-bottom: 1px solid var(--steel-line);
+            color: var(--text-dim);
+        }
+        table.tech-table tr:last-child td { border-bottom: none; }
+        table.tech-table td strong { color: var(--text); }
+
+        /* ============ REVEAL ANIMATIONS ============ */
+        .reveal { opacity: 0; transform: translateY(16px); transition: opacity .5s ease, transform .5s ease; }
+        .reveal.in { opacity: 1; transform: translateY(0); }
+        .no-js .reveal { opacity: 1; transform: none; }
+
+        /* ============ FOOTER ============ */
+        footer {
+            background: #0d1015;
+            color: #fff;
+            padding: 60px 0 30px 0;
+            border-top: 1px solid #22262e;
+        }
+        .footer-top { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 32px; margin-bottom: 40px; }
+        .footer-col h5 { font-family: 'Oswald', sans-serif; text-transform: uppercase; margin-bottom: 16px; color: var(--amber-soft); }
+        .footer-col a { display: block; color: #a0a6b0; font-size: 13.5px; margin-bottom: 8px; }
+        .footer-col a:hover { color: #fff; }
+        .footer-bottom { border-top: 1px solid #22262e; padding-top: 24px; font-size: 12px; color: #6b7280; display: flex; justify-content: space-between; }
+    </style>
+
+    <!-- Schema.org Markup for ToolRoom Services -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Precision Tool Room Services",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "Rameshwar Engineers",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Pune",
+          "addressRegion": "Maharashtra",
+          "addressCountry": "IN"
+        }
+      },
+      "description": "State-of-the-art precision tool room at Rameshwar Engineers. Specialties include design, manufacturing, and maintenance of press tools, dies, jigs, and fixtures.",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Tooling capabilities",
+        "itemListElement": [
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Tool Design & Engineering" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Dies & Molds Manufacturing" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Jig & Fixture Fabrication" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Tool Maintenance & Repair" } }
+        ]
+      }
+    }
+    </script>
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header id="siteHeader">
+    <div class="wrap">
+        <a href="index.html" class="logo">
+            <img src="assets/images/logo.png" alt="Rameshwar Engineers Logo" class="logo-mark-img">
+            <div class="logo-text">
+                <b style="color: #913420;">Rameshwar Engineers</b>
+                <span>Est. 1998</span>
+            </div>
+        </a>
+        <nav class="desktop-nav">
+            <a href="index.html#about">About</a>
+            <a href="index.html#services">Services</a>
+            <a href="tool-room.html" style="color: var(--amber-text); font-weight:700;">Tool Room</a>
+            <a href="index.html#products">Products</a>
+            <a href="index.html#customers">Customers</a>
+            <a href="index.html#contact">Contact</a>
+        </nav>
+        <div class="header-cta">
+            <span class="header-phone">+91 99229 53455</span>
+            <a href="index.html#contact" class="btn btn-amber">Request Tooling Quote</a>
+        </div>
+        <div class="burger" id="burger"><span></span><span></span><span></span></div>
+    </div>
+</header>
+
+<!-- ============ PAGE HERO ============ -->
+<section class="page-hero">
+    <div class="wrap">
+        <div class="page-hero-grid">
+            <div class="reveal">
+                <div class="eyebrow">Precision Infrastructure</div>
+                <h1>State-of-the-Art Precision Tool Room</h1>
+                <p class="lead">From concept validation to complex tool development, our facility is equipped with high-grade machinery and advanced CAD/CAM software to deliver flawless dies, molds, jigs, and fixtures for the automotive and engineering sectors.</p>
+                <a href="#machinery" class="btn btn-amber">Explore Technology</a>
+            </div>
+            <div class="hero-media-box reveal">
+                <img src="assets/images/toolroom-hero.jpg" alt="Rameshwar Engineers Tool Room VMC Machining Center">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ CAPABILITIES ============ -->
+<section id="capabilities">
+    <div class="wrap">
+        <div class="section-head reveal">
+          <div class="eyebrow">Key Capabilities</div>
+          <h2>Concept to finished tool, under one roof</h2>
+          <p>Our expert tooling team utilizes an integration of advanced machining technologies and strict quality control to deliver high-performance tooling setups.</p>
+        </div>
+
+        <div class="capabilities-grid reveal">
+            <div class="cap-card">
+                <div class="cap-num">01 / ENGINEERING</div>
+                <h3>Tool Design & CAD/CAM</h3>
+                <p>Complete 3D tool modeling, simulation, and strip layout optimization using parametric CAD/CAM suites to ensure flawless manufacturing.</p>
+            </div>
+            
+            <div class="cap-card">
+                <div class="cap-num">02 / MANUFACTURING</div>
+                <h3>Dies & Molds Production</h3>
+                <p>Fabrication of precision dies (progressive, compound, and stage dies) and complex casting molds utilizing multi-axis VMC machining.</p>
+            </div>
+
+            <div class="cap-card">
+                <div class="cap-num">03 / SPECIAL FIXTURES</div>
+                <h3>Jigs & Fixtures Fabrication</h3>
+                <p>Custom design and fabrication of modular welding jigs, assembly fixtures, and inspection gauges for repeatable production accuracy.</p>
+            </div>
+
+            <div class="cap-card">
+                <div class="cap-num">04 / VALIDATION</div>
+                <h3>Tool Tryouts & Validation</h3>
+                <p>Integrated tryout facility with up to heavy tonnage press capacity to validate tool performance and produce Initial Sample Inspection Reports (ISIR).</p>
+            </div>
+
+            <div class="cap-card">
+                <div class="cap-num">05 / MAINTENANCE</div>
+                <h3>Refurbishment & Repair</h3>
+                <p>Comprehensive preventive maintenance, tool sharpening, damage repair, and modification services to extend tool operational lifespan.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ MACHINERY / TECH TABLE ============ -->
+<section id="machinery" class="machinery-section">
+    <div class="wrap">
+        <div class="section-head reveal">
+          <div class="eyebrow">Technology Backbone</div>
+          <h2>Machinery & Infrastructure</h2>
+          <p>Our tool room is continuously upgraded with precision machinery to ensure tight tolerances and swift development cycles.</p>
+        </div>
+
+        <div class="tech-table-wrap reveal">
+            <table class="tech-table">
+                <thead>
+                    <tr>
+                        <th>Machine Type</th>
+                        <th>Specification / Capability</th>
+                        <th>Primary Use</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Vertical Machining Centers (VMC)</strong></td>
+                        <td>Multi-axis high-speed spindle</td>
+                        <td>Complex die cavity machining & core cutting</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Press Tryout Line</strong></td>
+                        <td>Up to 1000 Ton capacity</td>
+                        <td>Tool validation, sample production & batch testing</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Overhead Crane</strong></td>
+                        <td>10 Ton lifting capacity</td>
+                        <td>Handling of heavy die sets and bolster plates</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Surface Grinders</strong></td>
+                        <td>Precision finishing</td>
+                        <td>Achieving flat and smooth die plate surfaces</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Cylindrical Grinders</strong></td>
+                        <td>High-accuracy tolerance finishing</td>
+                        <td>Finishing of precision shafts, punches, and die buttons</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Quality Inspection Area</strong></td>
+                        <td>High-precision CMM, profile projector, digital height gauges</td>
+                        <td>Dimensional audit and final quality report (FQA)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+    <div class="wrap">
+        <div class="footer-top">
+            <div class="footer-col">
+              <h5>Rameshwar Engineers</h5>
+              <p style="font-size:13px; color:#a0a6b0; max-width:260px;">High-precision press tool design, die manufacturing, and VMC machining services since 1998.</p>
+            </div>
+            <div class="footer-col">
+              <h5>Quick Links</h5>
+              <a href="index.html">Home</a>
+              <a href="index.html#about">About Us</a>
+              <a href="tool-room.html">Dehu Tool Room</a>
+              <a href="index.html#products">Product Gallery</a>
+            </div>
+            <div class="footer-col">
+              <h5>Contact</h5>
+              <a href="tel:+919922953455">+91 99229 53455</a>
+              <a href="mailto:kailash72.r@gmail.com">kailash72.r@gmail.com</a>
+              <a href="index.html#contact">Send Inquiry</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>© <span id="yr"></span> Rameshwar Engineers. All rights reserved.</span>
+            <span>Tool Room facility located in Pune, Maharashtra.</span>
+        </div>
+    </div>
+</footer>
+
+<!-- ============ JAVASCRIPT ============ -->
+<script>
+    // Header scroll state
+    const header = document.getElementById('siteHeader');
+    window.addEventListener('scroll', () => {
+        header.classList.toggle('scrolled', window.scrollY > 40);
+    });
+
+    // Mobile nav toggle
+    const burger = document.getElementById('burger');
+    burger.addEventListener('click', () => {
+        alert('Navigation linked to index.html sections.');
+    });
+
+    // Dynamic Year
+    document.getElementById('yr').textContent = new Date().getFullYear();
+
+    // Reveal animations on scroll
+    document.documentElement.classList.remove('no-js');
+    const io = new IntersectionObserver((entries) => {
+        entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, { threshold:0.01, rootMargin:'0px 0px -5% 0px' });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+    setTimeout(() => document.querySelectorAll('.reveal:not(.in)').forEach(el => el.classList.add('in')), 1200);
+</script>
+
+</body>
+</html>

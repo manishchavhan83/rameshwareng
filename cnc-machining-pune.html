@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Precision CNC & VMC Machining Pune | Heavy Duty Tooling | Rameshwar Engineers</title>
+  <meta name="description" content="Leading CNC & VMC machining services in Pune by Rameshwar Engineers. Specializing in heavy-duty tooling, complex die components, banjo housings, and precision parts for automotive OEM supply chains. High-accuracy multi-axis capabilities.">
+  <meta name="keywords" content="CNC Machining Pune, VMC Machining Pune, Precision Machining Bhosari, CNC Job Work Chakan, Heavy Duty Machining Pune, Automotive Component Machining, Rameshwar Group Pune">
+  
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="assets/images/logo.png" type="image/x-icon">
+  
+  <style>
+    :root {
+      --bg: #ffffff;
+      --surface: #f5f6f7;
+      --surface-2: #eef0f2;
+      --steel-line: #e2e5e9;
+      --text: #12161c;
+      --text-dim: #5b6470;
+      --text-dimmer: #913420;
+      --amber: #e08a1e;
+      --amber-soft: #f2a63d;
+      --amber-dark: #b97c22;
+      --amber-text: #9c5c0c;
+      --hazard-y: #ffc72c;
+      --hazard-k: #141414;
+      --blue: #2f7dab;
+      --radius: 2px;
+      --maxw: 1200px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+    ul { list-style: none; }
+
+    h1, h2, h3, h4 {
+      font-family: 'Oswald', sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+      font-weight: 600;
+      line-height: 1.15;
+    }
+
+    .eyebrow {
+      font-family: 'JetBrains Mono', monospace;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      font-size: 12px;
+      color: var(--amber-text);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+    .eyebrow::before {
+      content: "";
+      width: 22px; height: 2px;
+      background: var(--amber-text);
+      display: inline-block;
+    }
+
+    .wrap {
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: 0 32px;
+    }
+    section { padding: 110px 0; position: relative; }
+    @media(max-width: 768px) { section { padding: 72px 0; } .wrap { padding: 0 20px; } }
+
+    .section-head { max-width: 700px; margin-bottom: 56px; }
+    .section-head h2 { font-size: clamp(28px, 4vw, 42px); color: var(--text); }
+    .section-head p { color: var(--text-dim); margin-top: 14px; font-size: 16px; }
+
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      padding: 13px 26px;
+      font-family: 'Inter', sans-serif; font-weight: 600; font-size: 13px;
+      text-transform: uppercase; letter-spacing: 0.06em;
+      border-radius: var(--radius);
+      cursor: pointer; border: 1px solid transparent;
+      transition: transform .18s ease, background .18s ease, border-color .18s ease, color .18s ease;
+      white-space: nowrap;
+    }
+    .btn:hover { transform: translateY(-2px); }
+    .btn-amber { background: var(--amber); color: #181205; }
+    .btn-amber:hover { background: var(--amber-soft); }
+    .btn-ghost { border-color: var(--steel-line); color: var(--text); background: transparent; }
+    .btn-ghost:hover { border-color: var(--amber-text); color: var(--amber-text); }
+    
+    /* Hazard tag - signature element */
+    .hazard-tag {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--hazard-k);
+      color: var(--hazard-y);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 7px 12px 7px 10px;
+      border-left: 10px solid transparent;
+      border-image: repeating-linear-gradient(-45deg, var(--hazard-y) 0 6px, var(--hazard-k) 6px 12px) 10;
+    }
+    .hazard-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--hazard-y); animation: pulse 1.8s infinite; }
+    @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: .35; } }
+
+    /* ============ HEADER ============ */
+    header {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--steel-line);
+      transition: padding .3s ease, box-shadow .3s ease;
+      padding: 16px 0;
+    }
+    header.scrolled {
+      padding: 10px 0;
+      box-shadow: 0 8px 24px rgba(18, 22, 28, 0.06);
+    }
+    header .wrap { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 28px; }
+    .logo { display: flex; align-items: center; gap: 12px; }
+    .logo-mark-img {
+      height: 48px;
+      width: auto;
+      object-fit: contain;
+      display: block;
+      transition: height .3s ease;
+    }
+    header.scrolled .logo-mark-img { height: 40px; }
+    .logo-text { font-family: 'Oswald', sans-serif; line-height: 1.1; }
+    .logo-text b { display: block; font-size: 16px; letter-spacing: 0.04em; color: var(--text); }
+    .logo-text span { display: block; font-size: 12px; letter-spacing: 0.16em; color: var(--text-dimmer); font-family: 'JetBrains Mono', monospace; margin-top: 2px; }
+
+    nav.desktop-nav { display: flex; gap: 32px; justify-self: center; }
+    nav.desktop-nav a {
+      font-size: 13px; text-transform: uppercase; letter-spacing: 0.08em;
+      color: var(--text-dim); font-weight: 500;
+      position: relative; padding-bottom: 4px;
+      transition: color .2s;
+    }
+    nav.desktop-nav a:hover { color: var(--text); }
+    nav.desktop-nav a::after {
+      content: ""; position: absolute; left: 0; bottom: 0; width: 0; height: 1px; background: var(--amber);
+      transition: width .25s ease;
+    }
+    nav.desktop-nav a:hover::after { width: 100%; }
+
+    .header-cta { display: flex; align-items: center; gap: 24px; justify-self: end; }
+    .header-phone { font-family: 'JetBrains Mono', monospace; font-size: 13px; color: var(--text-dim); display: flex; align-items: center; gap: 8px; white-space: nowrap; flex-shrink: 0; }
+    .header-phone svg { width: 15px; height: 15px; stroke: var(--amber-text); }
+
+    .burger { display: none; width: 26px; height: 20px; position: relative; cursor: pointer; }
+    .burger span { position: absolute; left: 0; width: 100%; height: 2px; background: var(--text); transition: .25s; }
+    .burger span:nth-child(1) { top: 0; }
+    .burger span:nth-child(2) { top: 9px; }
+    .burger span:nth-child(3) { top: 18px; }
+    .burger.open span:nth-child(1) { transform: translateY(9px) rotate(45deg); }
+    .burger.open span:nth-child(2) { opacity: 0; }
+    .burger.open span:nth-child(3) { transform: translateY(-9px) rotate(-45deg); }
+
+    .mobile-nav {
+      position: fixed; inset: 0; background: var(--bg); z-index: 90;
+      display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 28px;
+      transform: translateY(-100%); transition: transform .35s ease;
+    }
+    .mobile-nav.open { transform: translateY(0); }
+    .mobile-nav a { font-family: 'Oswald', sans-serif; font-size: 26px; text-transform: uppercase; letter-spacing: 0.04em; }
+
+    @media(max-width: 900px) {
+      nav.desktop-nav, .header-phone { display: none; }
+      .burger { display: block; }
+    }
+    @media(max-width: 560px) {
+      header .wrap { grid-template-columns: 1fr auto; }
+      .header-cta { display: none; }
+      .logo-text b { font-size: 13.5px; }
+      .logo-text span { display: none; }
+    }
+
+    /* ============ PAGE HERO ============ */
+    .page-hero {
+      padding-top: 170px;
+      padding-bottom: 80px;
+      background: linear-gradient(180deg, var(--surface) 0%, var(--bg) 100%);
+      border-bottom: 1px solid var(--steel-line);
+    }
+    .page-hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 48px;
+      align-items: center;
+    }
+    .page-hero h1 {
+      font-size: clamp(32px, 4.5vw, 54px);
+      margin-bottom: 18px;
+    }
+    .page-hero p.lead {
+      font-size: 17px;
+      color: var(--text-dim);
+      margin-bottom: 28px;
+    }
+    .hero-media-box {
+      border: 1px solid var(--steel-line);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: 0 16px 36px rgba(0,0,0,0.06);
+    }
+    @media(max-width: 900px) {
+      .page-hero-grid { grid-template-columns: 1fr; gap: 32px; }
+    }
+
+    /* ============ CAPABILITIES GRID ============ */
+    .machining-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: var(--steel-line);
+      border: 1px solid var(--steel-line);
+    }
+    .machining-card {
+      background: var(--bg);
+      padding: 40px;
+      transition: background .2s;
+    }
+    .machining-card:hover { background: var(--surface); }
+    .machining-card h3 { font-size: 20px; margin-bottom: 10px; text-transform: none; letter-spacing: 0; color: var(--text); }
+    .machining-card p { font-size: 14px; color: var(--text-dim); }
+    .card-icon { width: 32px; height: 32px; margin-bottom: 20px; stroke: var(--amber-text); fill: none; stroke-width: 1.5; }
+
+    @media(max-width: 900px) {
+      .machining-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media(max-width: 600px) {
+      .machining-grid { grid-template-columns: 1fr; }
+      .machining-card { padding: 30px; }
+    }
+
+    /* ============ MACHINERY TABLE ============ */
+    .machinery-section {
+      background: var(--surface);
+      border-top: 1px solid var(--steel-line);
+      border-bottom: 1px solid var(--steel-line);
+    }
+    .table-wrap {
+      background: var(--bg);
+      border: 1px solid var(--steel-line);
+      border-radius: var(--radius);
+      overflow-x: auto;
+    }
+    table.tech-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 14px;
+    }
+    table.tech-table th {
+      background: var(--surface-2);
+      font-family: 'Oswald', sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 16px 20px;
+      border-bottom: 1px solid var(--steel-line);
+    }
+    table.tech-table td {
+      padding: 16px 20px;
+      border-bottom: 1px solid var(--steel-line);
+      color: var(--text-dim);
+    }
+    table.tech-table tr:last-child td { border-bottom: none; }
+    table.tech-table td strong { color: var(--text); }
+
+    /* ============ GALLERY ============ */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+    }
+    .gallery-item {
+      aspect-ratio: 1;
+      background: var(--surface-2);
+      border: 1px solid var(--steel-line);
+      overflow: hidden;
+      position: relative;
+      cursor: pointer;
+    }
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+    .gallery-item:hover img { transform: scale(1.05); }
+    .gallery-cap {
+      position: absolute; bottom: 0; left: 0; right: 0;
+      padding: 10px 14px;
+      background: linear-gradient(0deg, rgba(0,0,0,0.7) 0%, transparent 100%);
+      color: #fff;
+      font-size: 12px;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    @media(max-width: 900px) {
+      .gallery-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+    @media(max-width: 600px) {
+      .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    /* ============ CONTACT FORM ============ */
+    .form-box {
+      background: var(--surface);
+      border: 1px solid var(--steel-line);
+      padding: 48px;
+      border-radius: var(--radius);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+    }
+    .form-copy h3 { font-size: 24px; margin-bottom: 12px; }
+    .form-copy p { color: var(--text-dim); font-size: 15px; margin-bottom: 24px; }
+    
+    form.cnc-enquiry { display: flex; flex-direction: column; gap: 16px; }
+    form.cnc-enquiry input, form.cnc-enquiry textarea, form.cnc-enquiry select {
+      background: var(--bg);
+      border: 1px solid var(--steel-line);
+      color: var(--text);
+      padding: 14px 18px;
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      border-radius: var(--radius);
+      width: 100%;
+    }
+    form.cnc-enquiry textarea { resize: vertical; min-height: 120px; }
+    form.cnc-enquiry select { appearance: none; background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%235b6470%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpolyline%20points%3D%226%209%2012%2015%2018%209%22%3E%3C%2Fpolyline%20points%3E%3C%2Fsvg%3E'); background-repeat: no-repeat; background-position: right 14px center; background-size: 18px; }
+
+    @media(max-width: 900px) {
+      .form-box { grid-template-columns: 1fr; padding: 32px; }
+    }
+
+    /* ============ FOOTER ============ */
+    footer {
+      background: #0d1015;
+      color: #fff;
+      padding: 60px 0 30px 0;
+      border-top: 1px solid #22262e;
+    }
+    .footer-top { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 32px; margin-bottom: 40px; }
+    .footer-col h5 { font-family: 'Oswald', sans-serif; text-transform: uppercase; margin-bottom: 16px; color: var(--amber-soft); }
+    .footer-col a { display: block; color: #a0a6b0; font-size: 13.5px; margin-bottom: 8px; }
+    .footer-col a:hover { color: #fff; }
+    .footer-bottom { border-top: 1px solid #22262e; padding-top: 24px; font-size: 12px; color: #6b7280; display: flex; justify-content: space-between; }
+
+    /* Lightbox */
+    .lightbox { position: fixed; inset: 0; background: rgba(0,0,0,0.9); z-index: 200; display: none; align-items: center; justify-content: center; flex-direction: column; }
+    .lightbox.open { display: flex; }
+    .lightbox img { max-width: 90%; max-height: 80vh; border-radius: 2px; }
+    .lb-cap { color: #fff; margin-top: 12px; font-family: 'JetBrains Mono', monospace; font-size: 13px; }
+    .lb-close { position: absolute; top: 20px; right: 30px; color: #fff; font-size: 32px; cursor: pointer; }
+
+    /* Reveal animations */
+    .reveal { opacity: 0; transform: translateY(16px); transition: opacity .5s ease, transform .5s ease; }
+    .reveal.in { opacity: 1; transform: translateY(0); }
+    .no-js .reveal { opacity: 1; transform: none; }
+  </style>
+
+  <!-- Schema.org Markup for CNC Services -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "Precision CNC & VMC Machining Services",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "Rameshwar Engineers",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Pune",
+        "addressRegion": "Maharashtra",
+        "addressCountry": "IN"
+      }
+    },
+    "areaServed": {
+      "@type": "City",
+      "name": "Pune",
+      "sameAs": "https://en.wikipedia.org/wiki/Pune"
+    },
+    "description": "High-precision CNC turning and VMC milling services in Pune. We specialize in heavy-duty tooling, die components, and automotive assemblies utilizing advanced multi-axis machinery.",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Machining capabilities",
+      "itemListElement": [
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "VMC Milling (Up to 2800mm)" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Heavy Duty Machining" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Banjo Housing Machining" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Tool & Die Component Machining" } }
+      ]
+    }
+  }
+  </script>
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header id="siteHeader">
+  <div class="wrap">
+    <a href="index.html" class="logo">
+      <img src="assets/images/logo.png" alt="Rameshwar Engineers Logo" class="logo-mark-img">
+      <div class="logo-text">
+        <b style="color: #913420;">Rameshwar Engineers</b>
+        <span>Est. 1998</span>
+      </div>
+    </a>
+    <nav class="desktop-nav">
+      <a href="index.html#about">About</a>
+      <a href="index.html#services">Services</a>
+      <a href="tool-room.html">Tool Room</a>
+      <a href="index.html#products">Products</a>
+      <a href="#machinery">Machinery</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="header-cta">
+      <span class="header-phone">+91 99229 53455</span>
+      <a href="#contact" class="btn btn-amber">Request Quote</a>
+    </div>
+    <div class="burger" id="burger"><span></span><span></span><span></span></div>
+  </div>
+</header>
+
+<!-- ============ MOBILE NAV ============ -->
+<div class="mobile-nav" id="mobileNav">
+  <a href="index.html#about">About</a>
+  <a href="index.html#services">Services</a>
+  <a href="tool-room.html">Tool Room</a>
+  <a href="index.html#products">Products</a>
+  <a href="#machinery">Machinery</a>
+  <a href="#contact">Contact</a>
+  <a href="#contact" class="btn btn-amber" style="margin-top:8px;">Request Quote</a>
+</div>
+
+<div id="top"></div>
+
+<!-- ============ PAGE HERO ============ -->
+<section class="page-hero">
+  <div class="wrap">
+    <div class="page-hero-grid">
+      <div class="reveal">
+        <div class="eyebrow">PCMC / Pune MIDC Facility</div>
+        <h1>Precision CNC & VMC Machining in Pune</h1>
+        <p class="lead">From complex tool & die components to high-volume automotive assemblies, our MIDC-based machining centers utilize advanced multi-axis technology to deliver exceptional accuracy, tight tolerances, and scalable production for industrial Tier-1 supply chains.</p>
+        <a href="#contact" class="btn btn-amber">Discuss Your Project</a>
+      </div>
+      <div class="hero-media-box reveal">
+        <img src="assets/images/cnc-machining-hero.jpg" alt="High Precision VMC Machining in Pune Factory">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CAPABILITIES ============ -->
+<section id="capabilities">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Core Expertise</div>
+      <h2>Machining capabilities tailored for heavy industries</h2>
+      <p>We combine 25+ years of tooling expertise with state-of-the-art CNC/VMC infrastructure to process diverse materials including tool steel, casting, and exotic alloys.</p>
+    </div>
+
+    <div class="machining-grid reveal">
+      <div class="machining-card">
+        <svg class="card-icon" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 3v18M3 9h18M3 15h18"/></svg>
+        <h3>Heavy Duty VMC Milling</h3>
+        <p>Large envelope machining (up to 2800mm) for die bolster plates, mold bases, and massive structural castings.</p>
+      </div>
+      
+      <div class="machining-card">
+        <svg class="card-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 2v20M2 12h20"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+        <h3>High Precision CNC Turning</h3>
+        <p>Turning capabilities for complex shafts, banjo housings, and critical automotive rotating components.</p>
+      </div>
+
+      <div class="machining-card">
+        <svg class="card-icon" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <h3>Tool & Die Component Machining</h3>
+        <p>Manufacturing critical core/cavity inserts, punches, and die buttons to sub-micron tolerances.</p>
+      </div>
+
+      <div class="machining-card">
+        <svg class="card-icon" viewBox="0 0 24 24"><path d="M4 21v-7m0 0a3 3 0 100-6 3 3 0 000 6zM20 21v-7m0 0a3 3 0 100-6 3 3 0 000 6zM12 21V3m-4 8l4 4 4-4"/></svg>
+        <h3>Complex Banjo Housing Lines</h3>
+        <p>Specialized machining lines dedicated to commercial vehicle axle components and banjo housings.</p>
+      </div>
+
+      <div class="machining-card">
+        <svg class="card-icon" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M7 7l10 10M17 7L7 17"/></svg>
+        <h3>Reverse Engineering</h3>
+        <p>Utilizing precision probing and scanning data to machine replacement components or obsolete parts.</p>
+      </div>
+
+      <div class="machining-card">
+        <svg class="card-icon" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+        <h3>Quality Validation</h3>
+        <p>Integrated CMM and inspection protocols ensuring every machined part meets client GD&T specs.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MACHINERY TABLE ============ -->
+<section id="machinery" class="machinery-section">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Infrastructure</div>
+      <h2>VMC & CNC Machinery Overview</h2>
+      <p>Our machining facility is equipped with a range of advanced multi-axis vertical machining centers and CNC lathes to handle diverse component sizes.</p>
+    </div>
+
+    <div class="table-wrap reveal">
+      <table class="tech-table">
+        <thead>
+          <tr>
+            <th>Machine Type</th>
+            <th>Work Envelope / Capacity</th>
+            <th>Make / Technology</th>
+            <th>Application</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Large Format VMC</strong></td>
+            <td>2800 x 1800 x 1000 mm</td>
+            <td>High-Tonnage Rigid Construction</td>
+            <td>Large Dies, Mold Bases, Heavy Castings</td>
+          </tr>
+          <tr>
+            <td><strong>Mid-Size VMC (x2)</strong></td>
+            <td>1600 x 800 x 800 mm</td>
+            <td>Fanuc / Siemens Controls</td>
+            <td>Tooling Components, Fixtures, Assemblies</td>
+          </tr>
+          <tr>
+            <td><strong>Standard VMC</strong></td>
+            <td>1200 x 600 x 700 mm</td>
+            <td>High-Speed Spindle (12k RPM)</td>
+            <td>Precision Components, Molds, Al Parts</td>
+          </tr>
+          <tr>
+            <td><strong>CNC Lathe (Heavy Duty)</strong></td>
+            <td>Swing Over Bed: 600mm / Length: 1500mm</td>
+            <td>Rigid Slant Bed</td>
+            <td>Shafts, Banjo Housings, Axle Parts</td>
+          </tr>
+          <tr>
+            <td><strong>CNC Lathe (Standard)</strong></td>
+            <td>Swing: 400mm / Length: 1000mm</td>
+            <td>Linear Guideways</td>
+            <td>Precision Turned Components</td>
+          </tr>
+          <tr>
+            <td><strong>Co-ordinate Measuring Machine</strong></td>
+            <td>High Accuracy 0.5 micron</td>
+            <td>Bridge Type</td>
+            <td>Dimensional Validation & GD&T Reports</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MACHINED PARTS GALLERY ============ -->
+<section id="products">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Machined Work</div>
+      <h2>Sample components from our floor</h2>
+      <p>A showcase of precision machined components, die blocks, complex housings, and turned parts delivered to clients in Bhosari, Chakan, and PCMC.</p>
+    </div>
+
+    <div class="gallery-grid reveal">
+      <div class="gallery-item"><img src="assets/images/machining/die-block.jpg" alt="VMC Machined Die Block Pune"><div class="gallery-cap">Machined Die Block</div></div>
+      <div class="gallery-item"><img src="assets/images/machining/banjo-housing.jpg" alt="CNC Turned Banjo Housing Pune"><div class="gallery-cap">Banjo Housing</div></div>
+      <div class="gallery-item"><img src="assets/images/machining/mold-cavity.jpg" alt="Complex Mold Cavity VMC Machining"><div class="gallery-cap">Mold Cavity Insert</div></div>
+      <div class="gallery-item"><img src="assets/images/machining/precision-shaft.jpg" alt="Precision CNC Turned Shaft Pune"><div class="gallery-cap">Precision Turned Shaft</div></div>
+      <div class="gallery-item"><img src="assets/images/machining/large-casting.jpg" alt="Large Casting VMC Milling Pune MIDC"><div class="gallery-cap">Large Casting Milling</div></div>
+      <div class="gallery-item"><img src="assets/images/machining/fixture-plate.jpg" alt="Machined Fixture Plate Pune"><div class="gallery-cap">VMC Fixture Plate</div></div>
+      <div class="gallery-item"><img src="assets/images/machining/turned-housing.jpg" alt="CNC turned automotive housing"><div class="gallery-cap">Automotive Housing</div></div>
+      <div class="gallery-item"><img src="assets/images/machining/hard-milling.jpg" alt="Hard Milling VMC Pune"><div class="gallery-cap">Hardened Steel Milling</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ENQUIRY FORM ============ -->
+<section id="contact" style="background:var(--surface); border-top:1px solid var(--steel-line);">
+  <div class="wrap">
+    <div class="form-box reveal">
+      <div class="form-copy">
+        <div class="eyebrow">Request Machining Quote</div>
+        <h3>Discuss your VMC or CNC requirement</h3>
+        <p>Submit your 2D drawings (PDF) or 3D models (STEP/IGES) for a detailed technical review and production quote. Our team in Pune MIDC will respond within 24 business hours.</p>
+        <div class="header-phone" style="font-size:14px; margin-top:30px;">
+          <svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Direct Machining Cell: +91 98231 69278
+        </div>
+      </div>
+
+      <form class="cnc-enquiry">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="you@company.com" required>
+        <input type="text" placeholder="Company Name" required>
+        <select required>
+          <option value="" disabled selected>Select Machining Type</option>
+          <option value="vmc">VMC Milling</option>
+          <option value="cnc">CNC Turning</option>
+          <option value="both">Both Turning & Milling</option>
+          <option value="fixture">Fixture/Tooling Job</option>
+        </select>
+        <textarea placeholder="Describe material, tolerances, volumes, or critical requirements..."></textarea>
+        <button type="submit" class="btn btn-amber" style="align-self:flex-start; margin-top:8px;">Submit RFQ</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-col">
+        <div class="logo">
+          <img src="assets/images/logo-invert.png" alt="Rameshwar Engineers Logo" class="logo-mark-img">
+          <div class="logo-text">
+            <b style="color: #fff;">Rameshwar Engineers</b>
+            <span>CNC Cell Pune</span>
+          </div>
+        </div>
+        <p style="font-size:13px; color:#a0a6b0; max-width:260px; margin-top:16px;">Precision CNC & VMC machining facility in Pune MIDC. Specializing in heavy-duty tooling since 1998.</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h5>Quick Links</h5>
+          <a href="index.html">Home</a>
+          <a href="index.html#about">About Us</a>
+          <a href="tool-room.html">Tool Room</a>
+          <a href="#machinery">Machinery</a>
+        </div>
+        <div class="footer-col">
+          <h5>Services</h5>
+          <a href="index.html#services">Tool & Die Design</a>
+          <a href="index.html#services">Press Tool Mfg</a>
+          <a href="#capabilities">VMC Milling</a>
+          <a href="#capabilities">CNC Turning</a>
+        </div>
+        <div class="footer-col">
+          <h5>Contact</h5>
+          <a href="tel:+919922953455">+91 99229 53455</a>
+          <a href="mailto:kailash72.r@gmail.com">kailash72.r@gmail.com</a>
+          <a href="#contact">Request Quote</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="yr"></span> Rameshwar Engineers. All rights reserved.</span>
+      <span>Precision Machining Facility located in Pune, India.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox">
+  <div class="lb-close" id="lbClose">&times;</div>
+  <img id="lbImg" src="" alt="">
+  <div class="lb-cap" id="lbCap"></div>
+</div>
+
+<script>
+  // header scroll state
+  const header = document.getElementById('siteHeader');
+  window.addEventListener('scroll', () => {
+    header.classList.toggle('scrolled', window.scrollY > 40);
+  });
+
+  // mobile nav
+  const burger = document.getElementById('burger');
+  const mobileNav = document.getElementById('mobileNav');
+  burger.addEventListener('click', () => {
+    burger.classList.toggle('open');
+    mobileNav.classList.toggle('open');
+  });
+  mobileNav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    burger.classList.remove('open'); mobileNav.classList.remove('open');
+  }));
+
+  // JS is running — remove the no-JS safety class
+  document.documentElement.classList.remove('no-js');
+
+  // reveal on scroll
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold:0.01, rootMargin:'0px 0px -5% 0px' });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  setTimeout(() => document.querySelectorAll('.reveal:not(.in)').forEach(el => el.classList.add('in')), 1200);
+
+  // lightbox
+  const lightbox = document.getElementById('lightbox');
+  const lbImg = document.getElementById('lbImg');
+  const lbCap = document.getElementById('lbCap');
+  document.querySelectorAll('.gallery-item').forEach(it => {
+    it.addEventListener('click', () => {
+      const img = it.querySelector('img');
+      lbImg.src = img.src;
+      lbCap.textContent = it.querySelector('.gallery-cap')?.textContent || '';
+      lightbox.classList.add('open');
+    });
+  });
+  document.getElementById('lbClose').addEventListener('click', () => lightbox.classList.remove('open'));
+  lightbox.addEventListener('click', (e) => { if(e.target === lightbox) lightbox.classList.remove('open'); });
+  document.addEventListener('keydown', (e) => { if(e.key === 'Escape') lightbox.classList.remove('open'); });
+
+  // footer year
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  // enquiry form (no backend - friendly no-op)
+  const enquiryForm = document.querySelector('form.cnc-enquiry');
+  if(enquiryForm) {
+    enquiryForm.addEventListener('submit', function(e){
+      e.preventDefault();
+      const btn = this.querySelector('button');
+      const original = btn.textContent;
+      btn.textContent = 'RFQ Received ✓';
+      setTimeout(() => { btn.textContent = original; this.reset(); }, 2200);
+    });
+  }
+</script>
+</body>
+</html>
