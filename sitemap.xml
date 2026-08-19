@@ -37,4 +37,14 @@
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url> 
+     <url>
+        <loc>https://rameshwareng.com/cnc-machining-pune.html</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url> 
+     <url>
+        <loc>https://rameshwareng.com/tool-room-in-dehu-pune.html</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url> 
 </urlset>
